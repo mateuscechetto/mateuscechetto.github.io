@@ -1,0 +1,16 @@
+<div class="startBar">
+    <div class="startButton">
+        <input id="start_button" type="image" alt="Start Button" src="../../assets/images/buttons-icons/xp_logo.png" height="28" width="28" />
+        <span>{{ 'STARTBAR.START' | translate }}</span>
+    </div>
+    <div class="startBarOpenedPrograms">
+        <div class="program" *ngFor="let program of programs" [ngClass]="{'active': program.isFocused }" 
+        (click)="makeProgramActive(program.key)" >
+            <input type="image" src="{{program.iconPath}}" alt="folderIcon" height="28" width="28"/>
+            <span> {{ program.title | translate }} </span>
+        </div>
+    </div>
+    <div class="clock">
+        <span>{{time.hours}}:{{time.minutes}}{{time.amPm}}</span>
+    </div>
+</div>

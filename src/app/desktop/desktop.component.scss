@@ -1,0 +1,52 @@
+.desktop {
+    background-image: url('../../assets/images/wallpaper.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    color: white;
+    text-shadow: 2px 2px 1px black;
+    
+
+    p {
+        margin-top: 5px;
+    }
+
+    .icon {
+        margin: 0px 20px 20px 20px;
+    }
+
+    .leftSide {
+        margin-top: 10px;
+    }
+
+    .left {
+        width: 50px;
+    }
+
+    .rightSide {
+        float: right;
+        width: 300px;
+    }
+
+    .right {
+        float: right;
+    }
+
+    .bottom {
+        position: absolute;
+        bottom: 50px;
+    }
+
+}

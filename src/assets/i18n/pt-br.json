@@ -1,0 +1,42 @@
+{
+    "DESKTOP": {
+        "MAQUIAR": "MaquiAR",
+        "RESUME": "currículo.pdf",
+        "URLSHORTENER": "Encurtador de URL",
+        "PORTFOLIO": "Este site",
+        "RECYCLEBIN": "Lixeira"
+    },
+    "STARTBAR": {
+        "START": "Iniciar"
+    },
+    "ABOUT": {
+        "TITLE": "Sobre mim"
+    },
+    "MAQUIAR": {
+        "TITLE": "MaquiAR",
+        "HEADLINE": "MaquiAR: Aplicativo de try-on de maquiagem com realidade aumentada usando ARCore",
+        "PARAGRAPH1": "Eu fiz o aplicativo MaquiAR como Trabalho de conclusão de curso para o Bacharelado em Sistemas de Informação na Universidade Federal de Santa Catarina. O app permite que usuários experimentem maquiagens antes de comprá-las online.",
+        "DEMONSTRATION": "Video de demonstração: ",
+        "IMAGE1": "Telas de navegação, favoritos, detalhes do produto e câmera do MaquiAR",
+        "IMAGE2": "Filtros do MaquiAR"
+    },
+    "PORTFOLIO": {
+        "TITLE": "Portfolio",
+        "HEADLINE": "Windows XP: Mateus Cechetto Edition",
+        "PARAGRAPH1": "I made this website as my portfolio to show my projects.",
+        "PARAGRAPH2": "The site simulates a Windows XP desktop.",
+        "IMAGE1": "Screenshot of the portfolio"
+    },
+    "URLSHORTENER": {
+        "TITLE": "URL Shortener",
+        "HEADLINE": "A URL shortener, like tinyURL",
+        "PARAGRAPH1": "This application returns a shorten URL given any URL. It was made as a coding test for a company that I ended being hired.",
+        "PARAGRAPH2": "System requirements (given in the code test):",
+        "PARAGRAPH3": "The site must allow users to short an original URL and generate a unique code with 5 or less characters",
+        "PARAGRAPH4": "The URL must not expire and if the same original URL is entered, the generated short URL must be different each time",
+        "PARAGRAPH5": "When the short URL is acessed, the user must be redirected to the original URL, with the least delay possible",
+        "IMAGE1": "URL Shortener web interface",
+        "IMAGE2": "Architecture"
+    }
+
+}

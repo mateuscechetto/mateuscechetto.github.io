@@ -1,0 +1,117 @@
+.window {
+    height: 500px;
+    width: 700px;
+    display: none;
+
+    min-height: 350px;
+    min-width: 500px;
+    border: solid 3px #397EF5;
+    border-radius: 3px 3px;
+    overflow: hidden;
+
+    position: absolute;
+    
+
+    &.active {
+        border-color: #245DDA;
+    }
+
+    &.show {
+        display: flex;
+    }
+
+
+    .handle {
+        background-color: #397EF5;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 26px;
+        color: white;
+        
+        &.active {
+            background-color: #245DDA;
+        }
+
+
+        &:hover {
+            cursor: grabbing;
+        }
+
+        .programIcon {
+            position: absolute;
+            top: 3px;
+            left: 3px;
+        }
+
+        .handleTitle {
+            padding-left: 30px;
+            line-height: 26px;
+        }
+
+    }
+
+    .content {
+        background-color: white;
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 26px 0 0 0;
+        text-shadow: none;
+
+        .leftColumn {
+            float: left;
+            background-color: #0598F7;
+            width: 125px;
+            min-width: 100px;
+            height: 100%;
+            border-right: 1px solid #245DDA;
+            text-shadow: 2px 2px 1px black;
+            text-align: center;
+
+            ul {
+                list-style-type: none;
+                padding-left: 0;
+            }
+        }
+
+        .headline {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 0;
+            color: #245DDA;
+        }
+
+        p {
+            color: black;
+            margin-left: 135px;
+            text-align: left;
+        }
+
+    }
+
+    .close {
+        position: absolute;
+        color: white;
+        top: 3px;
+        right: 2px;
+        line-height: 17px;
+        height: 20px;
+        width: 20px;
+        padding: 0px 0px 3px 0px;
+        border: 1px outset white;
+        text-align: center;
+        background-color: #dd4a1f;
+        font-size: large;
+        border-radius: 3px;
+
+        &:hover {
+            cursor: pointer;
+            box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+        }
+    }
+
+    .ng-resizable-diagonal {
+        border-bottom: none;
+    }
+}

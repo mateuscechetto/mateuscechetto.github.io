@@ -1,0 +1,44 @@
+{
+    "DESKTOP": {
+        "MAQUIAR": "MaquiAR",
+        "RESUME": "Resume.pdf",
+        "URLSHORTENER": "URL Shortener",
+        "PORTFOLIO": "This Website",
+        "RECYCLEBIN": "Recycle Bin"
+    },
+    "STARTBAR": {
+        "START": "Start"
+    },
+    "ABOUT": {
+        "TITLE": "About",
+        "GREETING": "Hi, my name is Mateus Cechetto and I'm a software developer passionate about simple and impactful solutions",
+        "PARAGRAPH1": "I graduated Information Systems at Universidade Federal de Santa Catarina ",
+        "TIPS": "Tip: You can move this window and resize it"
+    },
+    "MAQUIAR": {
+        "TITLE": "MaquiAR",
+        "HEADLINE": "MaquiAR: Makeup try-on app with augmented reality using ARCore",
+        "PARAGRAPH1": "I made the MaquiAR app as my undergraduation thesis for Bachelor of Information Systems at Universidade Federal de Santa Catarina. The app let users try makeups before buying them online.",
+        "DEMONSTRATION": "Video Demonstration: ",
+        "IMAGE1": "MaquiAR's navigation, favorites, product detail, and camera screens",
+        "IMAGE2": "MaquiAR's filters"
+    },
+    "PORTFOLIO": {
+        "TITLE": "Portfolio",
+        "HEADLINE": "Windows XP: Mateus Cechetto Edition",
+        "PARAGRAPH1": "I made this website as my portfolio to show my projects.",
+        "PARAGRAPH2": "The site simulates a Windows XP desktop.",
+        "IMAGE1": "Screenshot of the portfolio"
+    },
+    "URLSHORTENER": {
+        "TITLE": "URL Shortener",
+        "HEADLINE": "A URL shortener, like tinyURL",
+        "PARAGRAPH1": "This application returns a shorten URL given any URL. It was made as a coding test for a company that I ended being hired.",
+        "PARAGRAPH2": "System requirements (given in the code test):",
+        "PARAGRAPH3": "The site must allow users to short an original URL and generate a unique code with 5 or less characters",
+        "PARAGRAPH4": "The URL must not expire and if the same original URL is entered, the generated short URL must be different each time",
+        "PARAGRAPH5": "When the short URL is acessed, the user must be redirected to the original URL, with the least delay possible",
+        "IMAGE1": "URL Shortener web interface",
+        "IMAGE2": "Architecture"
+    }
+}
