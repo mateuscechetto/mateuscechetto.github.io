@@ -55,8 +55,8 @@ export const PROJECTS = {
         ],
         techs: ["Angular", "TypeScript", "HTML5", "SCSS",],
         links: [
-            new Link(SocialLinks.GITHUB, "https://github.com/mateuscechetto/portfolio-xp"),
-            new Link(SocialLinks.WEBSITE, "http://localhost:4200/")
+            new Link(SocialLinks.GITHUB, "https://github.com/mateuscechetto/mateuscechetto.github.io"),
+            new Link(SocialLinks.WEBSITE, "https://mateuscechetto.github.io")
         ],
         readMore: "PORTFOLIO.READMORE"
     },
