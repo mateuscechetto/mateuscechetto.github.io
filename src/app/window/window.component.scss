@@ -1,16 +1,16 @@
 .window {
-    height: 500px;
-    width: 700px;
+    height: 580px;
+    width: 820px;
     display: none;
 
     min-height: 350px;
     min-width: 500px;
     border: solid 3px #397EF5;
-    border-radius: 3px 3px;
+    border-radius: 8px 8px 0 0;
     overflow: hidden;
 
     position: absolute;
-    
+
 
     &.active {
         border-color: #245DDA;
@@ -28,7 +28,7 @@
         width: 100%;
         height: 26px;
         color: white;
-        
+
         &.active {
             background-color: #245DDA;
         }
@@ -47,45 +47,6 @@
         .handleTitle {
             padding-left: 30px;
             line-height: 26px;
-        }
-
-    }
-
-    .content {
-        background-color: white;
-        height: 100%;
-        width: 100%;
-        box-sizing: border-box;
-        padding: 26px 0 0 0;
-        text-shadow: none;
-
-        .leftColumn {
-            float: left;
-            background-color: #0598F7;
-            width: 125px;
-            min-width: 100px;
-            height: 100%;
-            border-right: 1px solid #245DDA;
-            text-shadow: 2px 2px 1px black;
-            text-align: center;
-
-            ul {
-                list-style-type: none;
-                padding-left: 0;
-            }
-        }
-
-        .headline {
-            text-align: center;
-            margin-top: 0;
-            margin-bottom: 0;
-            color: #245DDA;
-        }
-
-        p {
-            color: black;
-            margin-left: 135px;
-            text-align: left;
         }
 
     }
@@ -114,4 +75,78 @@
     .ng-resizable-diagonal {
         border-bottom: none;
     }
+
+    &.about {
+        height: 580px;
+        min-height: 580px;
+        width: 820px;
+        min-width: 595px;
+    }
+
+    &.recyclebin {
+        height: 350px;
+        width: 500px;
+    }
+
+    &.paint {
+        height: 520px;
+        width: 820px;
+    }
+
+    &.minesweeper {
+        height: 555px;
+        min-height: 555px;
+        width: 444px;
+        min-width: 444px;
+
+        &.sizeHard {
+            height: 666px;
+            min-height: 666px;
+            width: 555px;
+            min-width: 555px;
+        }
+    }
+}
+
+#aboutWindow {
+
+    .window {
+        height: 580px;
+        min-height: 580px;
+        width: 820px;
+        min-width: 500px;
+    }
+}
+
+#recyclebinWindow {
+    height: 350px;
+    width: 500px;
+}
+
+#minesweeperWindow {
+    .window {
+        height: 555px;
+        min-height: 555px;
+        width: 444px;
+        min-width: 444px;
+
+        &.sizeHard {
+            height: 666px;
+            min-height: 666px;
+            width: 555px;
+            min-width: 555px;
+        }
+    }
+}
+
+@media screen and (max-width:599px) {
+    .window {
+        display: none;
+        height: 90%;
+        width: 90%;
+        min-width: 0;
+        min-height: 0;
+
+    }
+
 }

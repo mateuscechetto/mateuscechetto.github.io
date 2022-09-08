@@ -1,0 +1,42 @@
+.content {
+    background-color: #ece9d6;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 26px 0 0 0;
+    text-shadow: none;
+    padding-left: 5px;
+
+    h3 {
+        color: #245DDA;
+        font-size: 1.5em;
+    }
+
+    h4 {
+        color: #245DDA;
+        font-size: 1.17em;
+        margin-bottom: 12px;
+    }
+
+    p {
+        color: black;
+        text-align: left;
+        margin-top: 9px;
+        margin-bottom: 0;
+    }
+
+    .tips {
+        color: #923;
+        font-size: 13px;
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        font-weight: bold;
+
+        p {
+            color: #923;
+            margin-top: 5px;
+        }
+    }
+
+}

@@ -1,0 +1,23 @@
+.content {
+    background-color: #ece9d6;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 26px 0 0 0;
+    text-shadow: none;
+    display: flex;
+
+    .icon {
+        margin: 10px;
+        width: 56px;
+        overflow-wrap: break-word;
+
+
+        p {
+            margin-top: 0;
+            color: black;
+        }
+    }
+
+
+}

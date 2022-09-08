@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, HostListener, Input, OnInit, Output } from '@angular/core';
 import { ProgramData } from '../models/ProgramData';
 import { Time } from '../models/Time';
 
@@ -10,30 +10,49 @@ import { Time } from '../models/Time';
 export class StartBarComponent implements OnInit {
 
   @Input() programs!: Set<ProgramData>;
+  @Input() language: string = 'en-US';
   @Output() activateProgram = new EventEmitter<string>();
+  @Output() changedLanguage = new EventEmitter<string>();
+
+  @HostListener('document:keyup', ['$event'])
+  handleKeyboardEvent(event: KeyboardEvent) {
+    if (event.key === 'Meta') {
+      this.toggleStartMenu();
+    }
+  }
+
+  shouldShowStartMenu: boolean = false;
+  shouldShowSocialSubMenu: boolean = false;
+  shouldShowLanguagesSubMenu: boolean = false;
+  shouldShowProgramsSubMenu: boolean = false;
 
   time: Time = new Time;
 
   intervalId: any;
 
-  constructor() {}
+  constructor() { }
 
   ngOnInit(): void {
-    this.intervalId = setInterval( () => {
+    this.intervalId = setInterval(() => {
       this.getTime();
-    }, 1000)    
+    }, 1000)
   }
 
   getTime() {
     let date = new Date();
     let hours = date.getHours();
-    this.time.amPm = hours < 12 ? "AM" : "PM";
-    hours %= 12;
     let hoursString: string;
-    if(hours === 0) {
-      hoursString = "12";
-    } else {
+    if (this.language == "pt-BR") {
       hoursString = hours.toString();
+      this.time.amPm = "";
+    } else {
+      this.time.amPm = hours < 12 ? "AM" : "PM";
+      hours %= 12;
+      if (hours === 0) {
+        hoursString = "12";
+      } else {
+        hoursString = hours.toString();
+      }
     }
     let minutesString = date.getMinutes().toString();
     hoursString = this.addZeroToTime(hoursString);
@@ -43,7 +62,7 @@ export class StartBarComponent implements OnInit {
   }
 
   private addZeroToTime(time: string) {
-    if(parseInt(time) < 10) {
+    if (parseInt(time) < 10) {
       time = "0" + time;
     }
     return time;
@@ -51,6 +70,42 @@ export class StartBarComponent implements OnInit {
 
   makeProgramActive(programName: string) {
     this.activateProgram.emit(programName);
+  }
+
+  toggleStartMenu() {
+    this.shouldShowStartMenu = !this.shouldShowStartMenu;
+  }
+
+  hideStartMenu() {
+    this.shouldShowStartMenu = false;
+  }
+
+  showSocialSubMenu() {
+    this.shouldShowSocialSubMenu = true;
+  }
+
+  hideSocialSubMenu() {
+    this.shouldShowSocialSubMenu = false;
+  }
+
+  showLanguagesSubMenu() {
+    this.shouldShowLanguagesSubMenu = true;
+  }
+
+  hideLanguagesSubMenu() {
+    this.shouldShowLanguagesSubMenu = false;
+  }
+
+  showProgramsSubMenu() {
+    this.shouldShowProgramsSubMenu = true;
+  }
+
+  hideProgramsSubMenu() {
+    this.shouldShowProgramsSubMenu = false;
+  }
+
+  changeLanguage(targetLanguage: string) {
+    this.changedLanguage.emit(targetLanguage);
   }
 
   ngOnDestroy() {

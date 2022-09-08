@@ -1,0 +1,11 @@
+<app-window [program]="program" [classes]="['recyclebin']" (activateProgram)="makeWindowActive()" (closeProgram)="closeWindow()"
+    id="recycleBinWindow">
+    <div class="content">
+        <div class="icon">
+            <input class="folder" id="moreAboutMe" type="image" alt="moreAboutMe"
+                src="../../assets/images/buttons-icons/folder_icon.png" height="50" width="50"
+                (click)="makeProgramActive('moreAboutMe')" />
+            <p>{{ 'RECYCLEBIN.MOREABOUTME' | translate }}</p>
+        </div>
+    </div>
+</app-window>

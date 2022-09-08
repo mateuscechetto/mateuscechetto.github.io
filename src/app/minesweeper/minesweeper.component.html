@@ -1,0 +1,39 @@
+<app-window [program]="program" [classes]="windowClasses" (activateProgram)="makeWindowActive()"
+    (closeProgram)="closeWindow()" id="minesweeperWindow">
+    <div class="content">
+        <table>
+            <thead></thead>
+            <tbody>
+                <tr>
+                    <td class="menu" id="mode-bar" [attr.colspan]="size">
+                        <div id="easy" [ngClass]="{'selected': activeMode.mode == 'easy'}" (click)="changeMode('easy')">
+                            {{ 'MINESWEEPER.EASY' | translate }}</div>
+                        <div id="normal" [ngClass]="{'selected': activeMode.mode == 'normal'}"
+                            (click)="changeMode('normal')">{{ 'MINESWEEPER.NORMAL' | translate }}</div>
+                        <div id="hard" (click)="changeMode('hard')" [ngClass]="{'selected': activeMode.mode == 'hard'}">
+                            {{
+                            'MINESWEEPER.HARD' | translate }}
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="menu" [attr.colspan]="size">
+                        <section id="status-bar">
+                            <div id="bomb-counter"> {{ bombCountString }} </div>
+                            <div id="reset" (click)="startGame()"><img src="{{ resetIcon }}"></div>
+                            <div id="timer"> {{ elapsedTimeString }} </div>
+                        </section>
+                    </td>
+                </tr>
+                <tr *ngFor="let row of board">
+                    <td *ngFor="let cell of row" class="game-cell"
+                        [ngClass]="{'revealed': cell.revealed, 'flagged': cell.flagged, 'bomb': cell.hasBomb && !cell.flagged, 'clickedBomb': cell.clickedBomb, 'wrongFlag': hitBomb && cell.revealed && cell.flagged && !cell.hasBomb}"
+                        [style.color]="textColors[cell.adjBombs]" (click)="onClickCell(cell)"
+                        (contextmenu)="onRightClick(cell)">
+                        {{ cell.revealed && !cell.hasBomb && !cell.flagged ? cell.adjBombs : '' }}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</app-window>

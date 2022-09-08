@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/portifolio",
+            "outputPath": "docs",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -108,5 +108,7 @@
       }
     }
   },
-  "defaultProject": "portifolio"
+  "cli": {
+    "analytics": "2755110e-2f85-480f-8d82-026d1c7e5d49"
+  }
 }

@@ -1,40 +1,12 @@
 <div ngDraggable [handle]="handle" [zIndex]="program.zIndex" [position]="program.position" ngResizable
-    [rzHandles]="'n,e,s,w,se,sw,ne,nw'" class="window"
-    [ngClass]="{'active': program.isFocused, 'show': program.isDisplayed }" (mousedown)="makeWindowActive()">
+    [rzHandles]="'n,e,s,w,se,sw,ne,nw'" class="window" (rzResizing)="onWindowResizing($event)"
+    [ngClass]="{'active': program.isFocused, 'show': program.isDisplayed, 'about': classes.includes('about'),'recyclebin': classes.includes('recyclebin'), 'minesweeper': classes.includes('minesweeper'), 'paint': classes.includes('paint'), 'sizeHard': classes.includes('sizeHard')}"
+    (mousedown)="makeWindowActive()">
     <div #handle class="handle" [ngClass]="{'active': program.isFocused }">
         <input class="programIcon" id="handleIcon" type="image" alt="handleIcon" src="{{program.iconPath}}" height="20"
             width="20" />
         <span class="handleTitle">{{ program.title | translate }}</span>
     </div>
     <button class="close" (click)="closeWindow()">x</button>
-    <div class="content">
-        <div class="leftColumn">
-            <ul class="techs">
-                <li *ngFor="let tech of project.techs">{{tech}}</li>
-            </ul>
-
-            <div class="buttonContainer">
-                <div class="button" *ngFor="let link of project.links">
-                    <a href="{{link.url}}" target="_blank">
-                        <input *ngIf="link.icon" class="buttonIcon" type="image" alt="{{link.text + ' icon'}}"
-                            src="{{link.icon}}" height="20" width="20" />
-                        <span>{{ link.text }}</span>
-                    </a>
-                </div>
-            </div>
-
-        </div>
-        <h3 class="headline">{{ project.headline | translate }}</h3>
-
-
-        <div *ngFor="let paragraph of project.paragraphs">
-            <p>{{ paragraph | translate }}</p>
-        </div>
-
-        <div *ngFor="let image of project.images">
-            <img src="{{image.src}}" alt="{{image.description | translate }}">
-
-        </div>
-
-    </div>
+    <ng-content></ng-content>
 </div>

@@ -1,0 +1,192 @@
+@font-face {
+    font-family: "Digital Dismay";
+    src: url("../../assets/fonts/digital-dismay.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "Press Start";
+    src: url("../../assets/fonts/prstart.ttf");
+}
+
+* {
+    -o-user-select: none;
+    user-select: none;
+}
+
+.content {
+    background-color: lightgray;
+}
+
+td {
+    height: 20px;
+    width: 20px;
+    background-color: #C0C0C0;
+    border: 1.5px solid;
+    border-top-color: #ffffff;
+    border-right-color: #7B7B7B;
+    border-bottom-color: #7B7B7B;
+    border-left-color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#mode-bar {
+    background-color: lightgray;
+    border: none;
+    text-align: left;
+    padding-left: 0;
+
+    div {
+        background-color: #C0C0C0;
+        border: 1.5px solid;
+        border-top-color: #ffffff;
+        border-right-color: #7B7B7B;
+        border-bottom-color: #7B7B7B;
+        border-left-color: #ffffff;
+        margin: 2px 2px 2px 0;
+
+        display: inline;
+        padding-left: 6px;
+        padding-right: 6px;
+        font-weight: bold;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    #easy {
+        color: #4B802D;
+    }
+
+    #normal {
+        color: #0000FA;
+    }
+
+    #hard {
+        color: #DB1300;
+    }
+
+    .selected {
+        background-color: lightgray;
+
+    }
+}
+
+#status-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2px;
+    margin: 6px;
+    border-top: 2px solid #7B7B7B;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    border-left: 2px solid #7B7B7B;
+}
+
+#reset {
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    border-top: 2px solid #ffffff;
+    border-right: 2px solid #7B7B7B;
+    border-bottom: 2px solid #7B7B7B;
+    border-left: 2px solid #ffffff;
+
+    &:hover {
+        text-align: center;
+        cursor: pointer;
+    }
+}
+
+#timer,
+#bomb-counter {
+    font-family: 'Digital Dismay';
+    font-size: 35px;
+    letter-spacing: 1px;
+    color: red;
+    background-color: black;
+    text-align: center;
+    padding: 4px 4px 0 7px;
+    line-height: 1em;
+}
+
+.game-cell {
+    font-family: "Press Start";
+    height: 20px;
+    width: 20px;
+    background-color: #C0C0C0;
+    border: 1.5px solid;
+    border-top-color: #ffffff;
+    border-right-color: #7B7B7B;
+    border-bottom-color: #7B7B7B;
+    border-left-color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+
+
+
+    &.revealed {
+        background-image: none;
+
+        background-color: #C0C0C0;
+        font-size: 80%;
+        text-align: center;
+        border: none;
+        height: 23px;
+        width: 23px;
+
+        &.bomb {
+            background-image: url("../../assets/images/minesweeper/bomb.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+
+            height: 20px;
+            width: 20px;
+            background-color: #C0C0C0;
+            border: 1.5px solid;
+            border-top-color: #ffffff;
+            border-right-color: #7B7B7B;
+            border-bottom-color: #7B7B7B;
+            border-left-color: #ffffff;
+
+            &.clickedBomb {
+                background-color: red;
+            }
+        }
+
+        &.wrongFlag {
+            background-image: url("../../assets/images/minesweeper/wrong-bomb.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+
+            height: 20px;
+            width: 20px;
+            background-color: #C0C0C0;
+            border: 1.5px solid;
+            border-top-color: #ffffff;
+            border-right-color: #7B7B7B;
+            border-bottom-color: #7B7B7B;
+            border-left-color: #ffffff;
+        }
+    }
+
+    &.flagged {
+        background-image: url("../../assets/images/minesweeper/flag.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        height: 20px;
+        width: 20px;
+        background-color: #C0C0C0;
+        border: 1.5px solid;
+        border-top-color: #ffffff;
+        border-right-color: #7B7B7B;
+        border-bottom-color: #7B7B7B;
+        border-left-color: #ffffff;
+    }
+
+
+
+}

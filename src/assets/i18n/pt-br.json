@@ -1,42 +1,83 @@
 {
     "DESKTOP": {
         "MAQUIAR": "MaquiAR",
-        "RESUME": "currículo.pdf",
+        "RESUME": "Currículo.pdf",
         "URLSHORTENER": "Encurtador de URL",
         "PORTFOLIO": "Este site",
         "RECYCLEBIN": "Lixeira"
     },
     "STARTBAR": {
-        "START": "Iniciar"
+        "START": "Iniciar",
+        "USER": "Usuário",
+        "CONTACT": "Contato",
+        "PROGRAMS": "Outros programas",
+        "ABOUT": "Sobre mim",
+        "LANGUAGES": "Mudar idioma"
     },
     "ABOUT": {
-        "TITLE": "Sobre mim"
+        "TITLE": "Sobre mim",
+        "GREETING": {
+            "HEADLINE": "Olá,",
+            "TEXT": "me chamo Mateus Cechetto e seja bem-vindo(a) ao meu portfolio :)"
+        },
+        "TEXT": "<p> Sou um desenvolvedor de software e moro em Florianópolis, Brasil. Sou apaixonado por soluções simples e impactantes. Mais do que qualquer coisa, eu vejo a tecnologia como uma ferramenta para tornar a vida das pessoas melhor.</p><p>Sou graduado em Sistemas de Informação pela Universidade Federal de Santa Catarina (UFSC). Tenho experiencia com <b>Java, Groovy, TypeScript, Angular, HTML/CSS, Android</b> e <b>Kotlin</b>, eu também já usei <b>Python</b> e tenho interesse em aprender mais sobre a linguagem.</p><p>Trabalhei por 2 anos num laboratório na UFSC, em projetos para o Ministério da Educação (MEC). Lá, trabalhei numa equipe multidisciplinar que me fez ver o mundo por ângulos diferentes. Essa experiência me fez ver a tecnologia como um meio, não um fim.</p><p>Fiz este site para mostrar alguns dos meus projetos e como cresci usando Windows XP fazê-lo me trouxe ótimas memórias :)</p>",
+        "TIPS": {
+            "TEXT": "Dicas:",
+            "1": "Você pode mover e mudar o tamanho desta janela",
+            "2": "Você pode mudar a idioma no menu Iniciar",
+            "3": "Você pode abrir o menu Iniciar apertando a tecla Windows",
+            "4": "Você pode fechar o menu inciar clicando em outro lugar da tela",
+            "5": "Você pode mudar a janela ativa pela barra do Iniciar",
+            "6": "Você pode abrir em tela cheia apertando F11 or clicando aqui"
+        }
     },
     "MAQUIAR": {
         "TITLE": "MaquiAR",
         "HEADLINE": "MaquiAR: Aplicativo de try-on de maquiagem com realidade aumentada usando ARCore",
-        "PARAGRAPH1": "Eu fiz o aplicativo MaquiAR como Trabalho de conclusão de curso para o Bacharelado em Sistemas de Informação na Universidade Federal de Santa Catarina. O app permite que usuários experimentem maquiagens antes de comprá-las online.",
-        "DEMONSTRATION": "Video de demonstração: ",
-        "IMAGE1": "Telas de navegação, favoritos, detalhes do produto e câmera do MaquiAR",
-        "IMAGE2": "Filtros do MaquiAR"
+        "TEXT": "<p> Fiz o MaquiAR como Trabalho de Conclusão de Curso (TCC) para o Bacharelado em Sistemas de Informação na Universidade Federal de Santa Catarina (UFSC). O aplicativo utiliza <b>Realidade Aumentada</b> para permitir que usuários experimentem maquiagens antes de comprá-las online. </p>",
+        "READMORE": "<hr><p>O aplicativa <b>Android</b> foi desenvolvido majoritariamente em <b>Kotlin</b>, com algumas partes em <b>Java</b>. Ele utiliza <b>ARCore</b> para utilizar <b>Realidade Aumentada</b>.</p><p>Funcionalidades:</p><ul><li>Lista as maquiagens</li><li>Descreve a maquiagem em uma página específica</li><li>Try-on virtual da maquiagem</li><li>Troca de maquiagem sem sair da tela de try-on virtual</li><li>Adiciona, remove e exibe lista de favoritos</li><li>Tira fotos e compartilha nas redes sociais</li><li>Direciona o usuário para o website da loja da maquiagem experimentada</li></ul><p>Para reutilizar as texturas com diferentes cores de maquiagem, criei uma textura branca e utilizei <b>Open GL Shading Language (GLSL)</b> para dar diferente cores à ela. Como branco tem o valor (1,1,1) na GLSL, ele é o elemento neutro da multiplicação, então eu posso multiplicar a textura branca a cor da maquiagem desejada, resultando na cor desejada.</p><p>O questionário <b>System Usability Scale (SUS)</b> foi aplicado a 10 alunos e a pontuação média do MaquiAR foi de <b>88,5.</b></p>"
     },
     "PORTFOLIO": {
         "TITLE": "Portfolio",
         "HEADLINE": "Windows XP: Mateus Cechetto Edition",
-        "PARAGRAPH1": "I made this website as my portfolio to show my projects.",
-        "PARAGRAPH2": "The site simulates a Windows XP desktop.",
-        "IMAGE1": "Screenshot of the portfolio"
+        "TEXT": "<p>Eu fiz este site como meu portfolio para mostrar alguns dos meus projetos.</p><p>Ele simula um desktop do Windows XP.</p><p>Foi desenvolvido usando <b>Angular, TypeScript, HTML</b> e <b>SCSS</b>.</p>",
+        "READMORE": "<hr><ul><li>Os projetos são apresentados em janelas</li><li>As janelas podem ser movidas e redimensionadas</li><li>As janelas recebem o foco quando clicadas</li><li>O usuário pode mudar a janela ativa pela barra Iniciar</li><li>Possui 2 idiomas: Português e Ingles</li><li>Ele reconhece o idioma padrão do usuário e seleciona um dos dois, o padrão é Inglês</li><li>O idioma pode ser mudado em tempo real, sem precisar recarregar a página</li><li>É mobile-friendly</li><li>O relógio atualiza em tempo real</li><li>Possui outros programas, como Paint e Campo Minado</li></ul>"
     },
     "URLSHORTENER": {
-        "TITLE": "URL Shortener",
-        "HEADLINE": "A URL shortener, like tinyURL",
-        "PARAGRAPH1": "This application returns a shorten URL given any URL. It was made as a coding test for a company that I ended being hired.",
-        "PARAGRAPH2": "System requirements (given in the code test):",
-        "PARAGRAPH3": "The site must allow users to short an original URL and generate a unique code with 5 or less characters",
-        "PARAGRAPH4": "The URL must not expire and if the same original URL is entered, the generated short URL must be different each time",
-        "PARAGRAPH5": "When the short URL is acessed, the user must be redirected to the original URL, with the least delay possible",
-        "IMAGE1": "URL Shortener web interface",
-        "IMAGE2": "Architecture"
-    }
+        "TITLE": "Encurtador de URL",
+        "HEADLINE": "Um encurtador de URL, como tinyURL",
+        "TEXT": "<p> Esta aplicação retorna um URL curto, dado um URL qualquer. Ela também salva um histórico dos últimos URLs encurtados pelo usuário. Ela foi feita como um coding test de uma empresa que acabei sendo contratado. </p> <p>Requisitos do sistema (fornecidos no code test): </p> <ul><li>O site precisa permitir aos usuários encurtar um URL e gerar um código único com 5 ou menos caracteres</li><li>O URL não pode expirar e caso o mesmo URL original for inserido, o código encurtado deve ser diferente a cada vez</li><li>Quando um URL curto for acessado, o usuário precisa ser redirecionado para o URL original, com o menor delay possível</li></ul>",
+        "READMORE": "<hr><p>A aplicação back end foi desenvolvida em <b>Java</b>, usando <b>Spring boot</b>. Foram usados <b>JPA (Java Persistence API)</b> e <b>Postgres</b> para gerenciar o banco de dados.</p><p>Ela é composta por um endpoint <b>POST</b> e um <b>GET</b>. O POST gera um URL curto dado um URL original e o GET redireciona o usuário, seja para o site original, se o URL inserido for um URL encurtado válido, seja pra página de erro da aplicação front end.</p><p>Para cumprir todos os requisitos, foram adotadas as seguintes estratégias: </p><ul><li>Assim que um URL é inserido, um ID único é criado para ele. Ele é criado sequencialmente, incrementando 1 do último ID</li><li>O ID único (um número) é codificado para base62, resultando em um valor com números, letras minúsculas e maiúsculas. Esse valor é o URL curto</li><li>Para encontrar o URL original a partir do encurtado, o encurtado é decodificado e o resultado é o ID do original no banco de dados</li></ul><p>Foi escolhido usar IDs sequenciais (usando JPA GeneratedValue), para garantir que os IDs sejam únicos mesmo quando há <b>concorrência</b>, mesmo que isso resulte nos URLs sendo previsíveis (o que pode ser visto como uma falha de segurança).</p><hr><p>A aplicação front end foi desenvolvida com <b>Angular</b>, usando os componentes do <b>Angular Material</b>.</p><p>A interface é <b>limpa</b> e <b>simples de usar</b>.</p><p>Para manter um <b>histórico</b> dos URLs encurtados pelo usuário, os URLs são armazenados no <b>local storage</b>.</p>"
+    },
+    "RECYCLEBIN": {
+        "TITLE": "Lixeira",
+        "MOREABOUTME": "Mais sobre mim"
+    },
+    "MOREABOUTME": {
+        "HEADLINE": "Um pouco sobre meus hobbies",
+        "TEXT": "<p>Meus hobbies são esportes (principalmente futebol⚽), vídeo games🎮, música🎵, e trívias sobre países🌍. Eu aprendi tantos fatos sobre diferentes países que me fez querer visitar todos, e eu vou!</p><p>Na adolescencia, joguei na categoria de base de times da primeira divisão do Brasil o que me tornou muito <b>disciplinado</b> e <b>focado</b>.</p><p>Durante o primeiro ano da pandemia da COVID-19 (2020), joguei Hearthstone competitivamente. Hearthstone é um jogo de cartas online estratégico baseado em turnos, entre 2 oponentes, que usam decks de 30 cartas juntos de um herói com poder único. Durante esse ano:</p><ul><li>Terminei temporadas no topo da ranqueada (Sou o terceiro brasileiro com mais finishes)</li><li>Terminei top 10 e top 8 nas 2 últimas edições da ESL Brazilian Premier League</li><li>Participei em 2 Masters Tours, que são os torneios de maior importância do Hearthstone</li><li>Alcancei o rank 2 do servidor Asia-Pacífico e rank 7 do servidor das Américas</li><li>Inventei um dos melhores decks de todos os tempos (6D Warlock)</li><li>Fiz outros decks que compuseram metas</li></ul><p>Nesse ano eu entrei em grupos com os melhores jogadores do mundo. Nesses grupos, eu agia principalmente como a <b>pessoa criativa</b>, o cara do \"e se\", sempre inventendo estratégias novas. Meu <b>Inglês</b> melhorou muito nesse anno, eu conversava por mensagem o tempo todo e por voz quase todos os dias. Eu também fiz live em inglês para mais de 900 pessoas.</p><p>Em 2021 eu comecei a fazer trivias no Sporcle, e hoje posso dizer que sei a bandeira de todos os países e posso, também, apontá-los num mapa (mesmo sem as linhas das fronteiras!).</p>",
+        "ENGLISH": "Inglês",
+        "CREATIVITY": "Criatividade",
+        "TEAMWORK": "Trabalho em equipe",
+        "DISCIPLINE": "Disciplina",
+        "TIMEMANAGEMENT": "Gerenciamento de tempo"
+    
+    },
+    "MSPAINT": {
+        "TITLE": "Paint",
+        "SIZE": "Tamanho",
+        "CLEAR": "Limpar",
+        "OPENNEWTAB": "Abrir imagem",
+        "DOWNLOAD": "Download"
+    },
+    "MINESWEEPER": {
+        "TITLE": "Campo Minado",
+        "EASY": "Fácil",
+        "NORMAL": "Médio",
+        "HARD": "Difícil",
+        "TOOLTIPHARD": "O modo hard ainda não está disponível"
+    },
+    "READMORE": "ler mais",
+    "READLESS": "ler menos"
 
 }

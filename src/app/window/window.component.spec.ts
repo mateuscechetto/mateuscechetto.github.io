@@ -11,9 +11,7 @@ describe('WindowComponent', () => {
       declarations: [ WindowComponent ]
     })
     .compileComponents();
-  });
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(WindowComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

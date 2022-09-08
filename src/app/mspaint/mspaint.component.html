@@ -1,0 +1,27 @@
+<app-window [program]="program" (activateProgram)="makeWindowActive()" [classes]="['paint']"
+(closeProgram)="closeWindow()" (windowResizing)="onWindowResizing($event)" id="msPaintWindow">
+    <div class="content">
+        <div class="toolbar">
+            <div class="colorPicker">
+                <button class="activeColor" [style.background-color]="activeColor"></button>
+                <button *ngFor="let color of colors | keyvalue" class="colorButton"
+                    [style.background-color]="color.value" (click)="changeColor(color.key)"></button>
+            </div>
+            <div class="lineWidthPicker">
+                <span> {{'MSPAINT.SIZE' | translate }}: {{ lineWidth }} </span>
+                <input #lineWidthPicker class="slider" type="range" min="1" max="30" value="{{lineWidth}}"
+                    (change)="changeLineWidth(lineWidthPicker.value)">
+            </div>
+
+            <button class="paintButton" (click)="clearCanvas()"> {{'MSPAINT.CLEAR' | translate }} </button>
+
+            <button class="paintButton" (click)="openImageNewTab()"> {{'MSPAINT.OPENNEWTAB' | translate }} </button>
+
+            <button class="paintButton" (click)="downloadImage()"> {{'MSPAINT.DOWNLOAD' | translate }} </button>
+        </div>
+        <canvas paintCanvas [strokeColor]="activeColor" [lineWidth]="lineWidth" [(shouldClear)]="shouldClear"
+            [(shouldOpenInNewTab)]="shouldOpenInNewTab" [(shouldDownload)]="shouldDownload" [height]="windowHeight"
+            [width]="windowWidth"></canvas>
+
+    </div>
+</app-window>

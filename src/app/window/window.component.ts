@@ -1,7 +1,6 @@
-import { Component, EventEmitter, Input, OnInit, Output, SimpleChanges } from '@angular/core';
-import { Position } from 'angular2-draggable';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { IResizeEvent } from 'angular2-draggable/lib/models/resize-event';
 import { ProgramData } from '../models/ProgramData';
-import { Project } from '../models/Project';
 
 @Component({
   selector: 'app-window',
@@ -10,17 +9,16 @@ import { Project } from '../models/Project';
 })
 export class WindowComponent implements OnInit {
 
-  @Input() project!: Project;
   @Input() program!: ProgramData;
-  @Input() position!: Position;
   @Output() activateProgram = new EventEmitter<string>();
   @Output() closeProgram = new EventEmitter<string>();
+  @Output() windowResizing = new EventEmitter<IResizeEvent>();
+  @Input() classes: string[] = [];
 
 
   constructor() { }
 
   ngOnInit(): void {
-
   }
 
   makeWindowActive() {
@@ -29,6 +27,10 @@ export class WindowComponent implements OnInit {
 
   closeWindow() {
     this.closeProgram.emit(this.program.key);
+  }
+
+  onWindowResizing(event: IResizeEvent) {
+    this.windowResizing.emit(event);
   }
 
 }

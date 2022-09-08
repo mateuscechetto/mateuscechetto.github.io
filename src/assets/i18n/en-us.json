@@ -7,38 +7,75 @@
         "RECYCLEBIN": "Recycle Bin"
     },
     "STARTBAR": {
-        "START": "Start"
+        "START": "Start",
+        "USER": "User",
+        "CONTACT": "Contact",
+        "PROGRAMS": "Other Programs",
+        "ABOUT": "About",
+        "LANGUAGES": "Change Language"
     },
     "ABOUT": {
         "TITLE": "About",
-        "GREETING": "Hi, my name is Mateus Cechetto and I'm a software developer passionate about simple and impactful solutions",
-        "PARAGRAPH1": "I graduated Information Systems at Universidade Federal de Santa Catarina ",
-        "TIPS": "Tip: You can move this window and resize it"
+        "GREETING": {
+            "HEADLINE": "Hi,",
+            "TEXT": "my name is Mateus Cechetto and welcome to my portfolio :)"
+        },
+        "TEXT": "<p> I'm a software developer from Florianópolis, Brazil. I'm passionate about simple and impactful solutions. More than anything, I like to see the technology as a tool to improve people's lives.</p><p>I gratuated in Information Systems at Universidade Federal de Santa Catarina (UFSC). I've experience with <b>Java, Groovy, TypeScript, Angular, HTML/CSS, Android</b> and <b>Kotlin</b>, I also have used <b>Python</b> and I have interest in learning it more deeply.</p><p>I worked for 2 years in a lab at UFSC, in projects for the Brazil Department of Education (MEC). There, I worked in a multidisciplinary team which made me see the world from different angles. It made me see the technology as a means, not an end.</p><p>I made this website to show some of my projects and because I grew up using Windows XP and building it brought me back memories :)</p>",
+        "TIPS": {
+            "TEXT": "Tips:",
+            "1": "You can move this window and resize it",
+            "2": "You can change language on the start menu",
+            "3": "You can open the start menu with the Windows key",
+            "4": "You can close the start menu by clicking outside it",
+            "5": "You can change the active window in the start bar",
+            "6": "You can fullscreen by pressing F11 or clicking here"
+        }
     },
     "MAQUIAR": {
         "TITLE": "MaquiAR",
         "HEADLINE": "MaquiAR: Makeup try-on app with augmented reality using ARCore",
-        "PARAGRAPH1": "I made the MaquiAR app as my undergraduation thesis for Bachelor of Information Systems at Universidade Federal de Santa Catarina. The app let users try makeups before buying them online.",
-        "DEMONSTRATION": "Video Demonstration: ",
-        "IMAGE1": "MaquiAR's navigation, favorites, product detail, and camera screens",
-        "IMAGE2": "MaquiAR's filters"
+        "TEXT": "<p> I made the MaquiAR app as my undergraduation thesis for Bachelor of Information Systems at Universidade Federal de Santa Catarina (UFSC). The app let users try makeups before buying them online. </p>",
+        "READMORE": "<hr><p>The <b>Android</b> app was written mostly in <b>Kotlin</b> with some parts in <b>Java</b>. It uses <b>ARCore</b> to utilize <b>Augmented Reality</b>.</p><p>Features:</p><ul><li>List the makeups</li><li>Makeup description page</li><li>Makeup try on</li><li>Change the makeup without leaving try on screen</li><li>Add, remove and visualize favorite makeups</li><li>Take photos and share in social media</li><li>Redirect the user to the website he can buy the makeup</li></ul><p>In order to reutilize the textures for different makeup colors, I created a white texture and used <b>Open GL Shading Language (GLSL)</b> to give it different colors. Since white has value (1,1,1) it is multiplication neutral element, so I can just multiply the white texture with the color of the makeup.</p><p>The <b>System Usability Scale (SUS)</b> questionnaire was applied to 10 students and MaquiAR's average score was <b>88.5.</b></p>"
     },
     "PORTFOLIO": {
         "TITLE": "Portfolio",
         "HEADLINE": "Windows XP: Mateus Cechetto Edition",
-        "PARAGRAPH1": "I made this website as my portfolio to show my projects.",
-        "PARAGRAPH2": "The site simulates a Windows XP desktop.",
-        "IMAGE1": "Screenshot of the portfolio"
+        "TEXT": "<p>I made this website as my portfolio to show some of my projects.</p><p>It simulates a Windows XP desktop.</p><p>It was created using <b>Angular, TypeScript, HTML</b> and <b>SCSS</b>.</p>",
+        "READMORE": "<hr><ul><li>The projects are presented in windows</li><li>The windows can be moved and resized</li><li>Once a window is clicked it gets focused</li><li>The user can change the focused window using the start bar</li><li>It has 2 languages: English and Portuguse</li><li>It recognizes user's browser language and set to one of the two, the default is English</li><li>The language can be changed in real time, without reloading the page</li><li>It is mobile friendly</li><li>The clock updates in real time</li><li>It has other programs such as Paint and Minesweeper</li></ul>"
     },
     "URLSHORTENER": {
         "TITLE": "URL Shortener",
         "HEADLINE": "A URL shortener, like tinyURL",
-        "PARAGRAPH1": "This application returns a shorten URL given any URL. It was made as a coding test for a company that I ended being hired.",
-        "PARAGRAPH2": "System requirements (given in the code test):",
-        "PARAGRAPH3": "The site must allow users to short an original URL and generate a unique code with 5 or less characters",
-        "PARAGRAPH4": "The URL must not expire and if the same original URL is entered, the generated short URL must be different each time",
-        "PARAGRAPH5": "When the short URL is acessed, the user must be redirected to the original URL, with the least delay possible",
-        "IMAGE1": "URL Shortener web interface",
-        "IMAGE2": "Architecture"
-    }
+        "TEXT": "<p> This application returns a shorten URL given any URL. It also saves the last urls the user shortened. It was made as a coding test for a company that I ended being hired. </p> <p> System requirements (given in the code test): </p> <ul><li>The site must allow users to short an original URL and generate a unique code with 5 or less characters</li><li>The URL must not expire and if the same original URL is entered, the generated short URL must be different each time</li><li>When the short URL is acessed, the user must be redirected to the original URL, with the least delay possible</li></ul>",
+        "READMORE": "<hr><p>The back end application was written in <b>Java</b>, using <b>Spring boot</b>. It was used <b>JPA (Java Persistence API)</b> and <b>Postgres</b> to manage the database.</p><p>It's composed of a <b>POST</b> and a <b>GET</b> endpoint. The POST generates a short URL given an URL and the GET redirects the user to the original website given a shorted URL or, if the short URL is a valid one, redirects to the front end error page.</p><p>To match all the requirements, the following startegies were adopted: </p><ul><li>Once an URL is given, an unique ID is created for it. It is made sequentially, incrementing 1 from the last ID</li><li>The unique ID (a number) is encoded to base62, resulting in a value with numbers, lowercase and uppercase letters. That value is the short URL</li><li>To find the original URL from the short URL, the short is decoded, the result is the id in the database</li></ul><p>It was chosen to use sequential ID (using JPA GeneratedValue), to guarantee unique ID's even when there is <b>concurrency</b>, even tho it makes the short URL's predictable (which could be a security flaw).</p><hr><p>The front end aplication was made with <b>Angular</b>, using <b>Angular Material</b> components.</p><p>The interface is <b>clean</b> and <b>simple</b> to use.</p><p>In order to keep a <b>history</b> of which URLs the user had shorten, they are stored in browser's <b>local storage</b>.</p>"
+    },
+    "RECYCLEBIN": {
+        "TITLE": "Recycle Bin",
+        "MOREABOUTME": "More about me"
+    },
+    "MOREABOUTME": {
+        "HEADLINE": "A bit about my hobbies",
+        "TEXT": "<p>My hobbies are sports (specially football⚽), video games🎮, music🎵, and trivias about countries🌍. I've learned so many facts about countries that made me want to visit all them, and I will!</p><p>During my youth I played football in Brazilian first division youth teams, which made me very <b>disciplined</b> and <b>hard worker</b>.</p><p>During the first year of COVID-19 pandemic (2020) I played Hearthstone competitively. Hearthstone is a turn-based digital collectible card game  between two opponents, using constructed decks of 30 cards along with a selected hero with a unique power. During that year:</p><ul><li>Finished multiple times on top of ranked ladder (I'm the third Brazilian with the most ladder finishes)</li><li>Finished top 10 and top 8 in the 2 last ESL Brazilian Premier Leagues</li><li>Participated in 2 Masters Tours, that are the Tier 1 tournaments for Hearthstone</li><li>Peaked at rank 2 of Asia-Pacific server and rank 7 of America's</li><li>Invented one of the best decks ever (6D Warlock)</li><li>Made couple other good decks</li></ul><p>During that year I joined practice groups with some of the best players in the world. There, I acted mostly as the <b>creative person</b>, the \"what if guy\", always inventing new strategies. My <b>English</b> improved a lot during that year, I chatted all the time and did voice calls almost every day. I also streamed in English to a public of over 900 people.</p><p>In 2021 I started doing Sporcle trivias, and now I can say I know the flag of every country in the world and I can point to each of them in a map (even without borderlines!).</p>",
+        "ENGLISH": "English",
+        "CREATIVITY": "Creativity",
+        "TEAMWORK": "Teamwork",
+        "DISCIPLINE": "Discipline",
+        "TIMEMANAGEMENT": "Time Management"
+    },
+    "MSPAINT": {
+        "TITLE": "Paint",
+        "SIZE": "Size",
+        "CLEAR": "Clear",
+        "OPENNEWTAB": "Open image",
+        "DOWNLOAD": "Download"
+    },
+    "MINESWEEPER": {
+        "TITLE": "Minesweeper",
+        "EASY": "Easy",
+        "NORMAL": "Normal",
+        "HARD": "Hard",
+        "TOOLTIPHARD": "Hard mode is not enabled yet"
+    },
+    "READMORE": "read more",
+    "READLESS": "read less"
 }

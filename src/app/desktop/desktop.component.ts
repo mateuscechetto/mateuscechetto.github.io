@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { BreakpointObserver } from '@angular/cdk/layout';
 import { TranslateService } from '@ngx-translate/core';
+import { distinctUntilChanged } from 'rxjs';
+
 import { Position } from 'angular2-draggable';
-import { ImageData } from '../models/ImageData';
-import { Link } from '../models/Link';
+
 import { ProgramData } from '../models/ProgramData';
-import { Project } from '../models/Project';
+import { Project, PROJECTS } from '../models/Project';
 
 @Component({
   selector: 'app-desktop',
@@ -15,71 +17,60 @@ export class DesktopComponent implements OnInit {
 
   lastZIndex = 100;
 
-  maquiAR: Project = {
-    headline: 'MAQUIAR.HEADLINE',
-    title: 'MAQUIAR.TITLE',
-    paragraphs: ['MAQUIAR.PARAGRAPH1'],
-    images: [
-      new ImageData("../../assets/images/maquiAR/maquiAR-1.png", "MAQUIAR.IMAGE1"),
-      new ImageData("../../assets/images/maquiAR/maquiAR-2.png", "MAQUIAR.IMAGE2"),
-    ],
-    techs:  ["Android", "Kotlin", "Java", "ARCore", "OpenGL"],
-    links: [
-      new Link("github", "https://github.com/mateuscechetto/MaquiAR"),
-      new Link("youtube", "https://youtu.be/Ch7qy21mvBo")
-    ]
-  };
+  programWindowSize: { width: number, height: number } = { width: 820, height: 520 };
 
-  maquiARProgram: ProgramData = new ProgramData("maquiAR", 'MAQUIAR.TITLE', String(this.lastZIndex - 1), new Position(565, -415), true, true);
+  windowSize: Position = new Position(0, 0);
 
-  urlShortener: Project = {
-    headline: 'URLSHORTENER.HEADLINE',
-    title: 'URLSHORTENER.TITLE',
-    paragraphs: ['URLSHORTENER.PARAGRAPH1', 'URLSHORTENER.PARAGRAPH2', 'URLSHORTENER.PARAGRAPH3', 'URLSHORTENER.PARAGRAPH4', 'URLSHORTENER.PARAGRAPH5'],
-    images: [
-      new ImageData("../../assets/images/url-shortener/urlShortener-1.png", "URLSHORTENER.IMAGE1"),
-      new ImageData("../../assets/images/url-shortener/urlShortener-2.png", "URLSHORTENER.IMAGE2"),
-    ],
-    techs:  ["Java", "Spring boot", "Postgres", "Angular", "Angular Material"],
-    links: [
-      new Link("github", "https://github.com/mateuscechetto/url-shortener")
-    ]
-  };
+  maquiAR: Project = PROJECTS.maquiAR;
+  portfolio: Project = PROJECTS.portfolio;
+  urlShortener: Project = PROJECTS.urlShortener;
+  moreAboutMe: Project = PROJECTS.moreAboutMe;
 
-  urlShortenerProgram: ProgramData = new ProgramData("urlShortener", 'URLSHORTENER.TITLE', String(this.lastZIndex), new Position(240, -350));
-
-
-  portfolio: Project = {
-    headline: 'PORTFOLIO.HEADLINE',
-    title: 'PORTFOLIO.TITLE',
-    paragraphs: ['PORTFOLIO.PARAGRAPH1', 'PORTFOLIO.PARAGRAPH2'],
-    images: [
-      new ImageData("../../assets/images/url-shortener/urlShortener-1.png", "URLSHORTENER.IMAGE1"),
-    ],
-    techs:  ["Angular", "Typescript", "HTML5", "SCSS", "ferramenta de deploy"],
-    links: [
-      new Link("github", "https://github.com/mateuscechetto/portfolio-xp")
-    ]
-  }
-
-  portfolioProgram: ProgramData = new ProgramData("portfolio", 'PORTFOLIO.TITLE', String(this.lastZIndex), new Position(210, -320));
-
-  activePrograms: Set<ProgramData> = new Set<ProgramData> ([
-    this.maquiARProgram
-  ]);
+  maquiARProgram: ProgramData = new ProgramData("maquiAR", 'MAQUIAR.TITLE', String(this.lastZIndex));
+  urlShortenerProgram: ProgramData = new ProgramData("urlShortener", 'URLSHORTENER.TITLE', String(this.lastZIndex));
+  portfolioProgram: ProgramData = new ProgramData("portfolio", 'PORTFOLIO.TITLE', String(this.lastZIndex));
+  aboutProgram: ProgramData = new ProgramData("about", "ABOUT.TITLE", String(this.lastZIndex), true, true, "../../assets/images/buttons-icons/Info_icon.png");
+  recycleBinProgram: ProgramData = new ProgramData("recycleBin", "RECYCLEBIN.TITLE", String(this.lastZIndex), false, false, "../../assets/images/buttons-icons/recycle-bin_icon.png");
+  moreAboutMeProgram: ProgramData = new ProgramData("moreAboutMe", "RECYCLEBIN.MOREABOUTME", String(this.lastZIndex));
+  msPaintProgram: ProgramData = new ProgramData("msPaint", "MSPAINT.TITLE", String(this.lastZIndex), false, false, "../../assets/images/buttons-icons/mspaint_icon.png");
+  minesweeperProgram: ProgramData = new ProgramData("minesweeper", "MINESWEEPER.TITLE", String(this.lastZIndex), false, false, "../../assets/images/minesweeper/Minesweeper_icon.png");
 
   programs = {
+    "about": this.aboutProgram,
     "maquiAR": this.maquiARProgram,
     "urlShortener": this.urlShortenerProgram,
-    "portfolio": this.portfolioProgram
+    "portfolio": this.portfolioProgram,
+    "recycleBin": this.recycleBinProgram,
+    "moreAboutMe": this.moreAboutMeProgram,
+    "msPaint": this.msPaintProgram,
+    "minesweeper": this.minesweeperProgram
   }
 
+  activePrograms: Set<ProgramData> = new Set<ProgramData>([
+    this.aboutProgram,
+  ]);
+
+
+  readonly breakpoints = this.breakpointObserver
+    .observe(['(min-width: 600px)', '(max-width: 599px)'])
+    .pipe(
+      distinctUntilChanged()
+    );
 
   constructor(
-    public translate: TranslateService
+    public translate: TranslateService,
+    private breakpointObserver: BreakpointObserver,
   ) {
-    translate.addLangs(['en-us', 'pt-br']);
-    translate.setDefaultLang('en-us');
+    let langs = ['en-US', 'pt-BR'];
+    let userLang = navigator.language;
+    let lang = langs.find(lang => lang.startsWith(userLang.substring(0, 2)));
+    let defaultLang = lang ? lang : 'en-US';
+    translate.addLangs(langs);
+    translate.setDefaultLang(defaultLang);
+    translate.use(defaultLang);
+    // translate.setDefaultLang('en-US');
+    // translate.use('en-US');
+
   }
 
   translateLanguageTo(language: string) {
@@ -87,19 +78,50 @@ export class DesktopComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.breakpoints.subscribe(() =>
+      this.breakpointChanged()
+    );
   }
 
-  makeProgramActive(programName: string) {    
+  breakpointChanged(): void {
+    this.setWindowSize();
+    this.setProgramsPositions();
+  }
+
+  private setWindowSize() {
+    this.windowSize.x = window.innerWidth;
+    this.windowSize.y = window.innerHeight;
+  }
+
+  private setProgramsPositions() {
+    if (this.windowSize.x > 599) {
+      //starts a bit to the left and up to not cover linkedin button
+      let index = -2;
+      let maxHeight = this.windowSize.y * 0.9 - this.programWindowSize.height;
+      for (let program in this.programs) {
+        this.programs[program as keyof typeof this.programs].position.x = ((this.windowSize.x - this.programWindowSize.width) / 2) + ((index + 1) * 30);
+        this.programs[program as keyof typeof this.programs].position.y = Math.min(maxHeight, ((this.windowSize.y - this.programWindowSize.height) / 2) + (index * 30));
+        index++;
+      }
+    } else {
+      for (let program in this.programs) {
+        this.programs[program as keyof typeof this.programs].position = new Position(10, 10);
+      }
+    }
+
+  }
+
+  makeProgramActive(programName: string) {
     this.lastZIndex++;
     let program = this.programs[programName as keyof typeof this.programs];
     program.zIndex = String(this.lastZIndex);
-    this.activePrograms.forEach(p => p.isFocused = false);   
+    this.activePrograms.forEach(p => p.isFocused = false);
     program.isFocused = true;
     program.isDisplayed = true;
     this.activePrograms.add(program);
   }
 
-  closeProgram(programName: string) {    
+  closeProgram(programName: string) {
     let program = this.programs[programName as keyof typeof this.programs];
     this.activePrograms.delete(program);
     program.isDisplayed = false;

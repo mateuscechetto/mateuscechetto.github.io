@@ -7,13 +7,13 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'portifolio';
+  title = 'portfolio';
 
   constructor(
-    public translate: TranslateService
+    public translate: TranslateService,
   ) {
-    translate.addLangs(['en-us', 'pt-br']);
-    translate.setDefaultLang('en-us');
+    translate.addLangs(['en-US', 'pt-BR']);
+    translate.setDefaultLang('en-US');
   }
 
   translateLanguageTo(language: string) {

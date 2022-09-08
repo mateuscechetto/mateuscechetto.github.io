@@ -1,11 +1,11 @@
-export class Link {
-    text: string;
-    url: string;
-    icon?: string;
+import { SocialLink } from "./SocialLink";
 
-    constructor(text: string, url: string, icon?: string) {
-        this.text = text;
+export class Link {
+    socialLink: SocialLink;
+    url: string;
+
+    constructor(socialLink: SocialLink, url: string) {
+        this.socialLink = socialLink;
         this.url = url;
-        this.icon = icon;
     }
 }

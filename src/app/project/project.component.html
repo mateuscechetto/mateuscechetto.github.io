@@ -1,0 +1,41 @@
+<app-window [program]="program" (activateProgram)="makeWindowActive()" (closeProgram)="closeWindow()">
+    <div class="content">
+        <div class="leftColumn">
+            <ul class="techs">
+                <li *ngFor="let tech of project.techs">{{ tech | translate }}</li>
+            </ul>
+
+            <div class="buttonContainer">
+                <div class="button" *ngFor="let link of project.links" [ngClass]="link.socialLink.cssClass">
+                    <a href="{{link.url}}" target="_blank">
+                        <input *ngIf="link.socialLink.icon" class="buttonIcon" type="image"
+                            alt="{{link.socialLink.name + ' icon'}}" src="{{link.socialLink.icon}}" height="20"
+                            width="20" />
+                        <span>{{ link.socialLink.name }}</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="mainBody">
+            <h3 class="headline">{{ project.headline | translate }}</h3>
+
+
+            <!-- <div *ngFor="let paragraph of project.paragraphs">
+            <p>{{ paragraph | translate }}</p>
+        </div> -->
+            <div [innerHTML]=" project.text | translate"></div>
+            <div *ngIf="readMore">
+                <div [innerHTML]=" project.readMore | translate"></div>
+            </div>
+            <button *ngIf="project.readMore" class="readMore" (click)="onPressedReadMore()">
+                {{ (!readMore ? "READMORE" : "READLESS") | translate }}</button>
+
+
+            <div class="galleryContainer" *ngIf="project.images!.length > 0">
+                <gallery id="{{project.title + 'id'}}" [items]="project.images" [imageSize]="'contain'" [thumb]="false"
+                    [counterPosition]="'bottom'"></gallery>
+            </div>
+        </div>
+    </div>
+</app-window>
