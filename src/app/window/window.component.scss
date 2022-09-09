@@ -144,8 +144,24 @@
         display: none;
         height: 90%;
         width: 90%;
-        min-width: 0;
-        min-height: 0;
+        min-width: 10px;
+        min-height: 10px;
+
+        &.about,
+        &.recyclebin,
+        &.paint,
+        &.minesweeper,
+        &.minesweeper.sizeHard {
+            height: 90%;
+            width: 90%;
+            min-width: 10px;
+            min-height: 10px;
+        }
+
+        &.show {
+            display: flex;
+        }
+
 
     }
 
