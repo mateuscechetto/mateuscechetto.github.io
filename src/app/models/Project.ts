@@ -25,7 +25,7 @@ export const PROJECTS = {
         links: [
             new Link(SocialLinks.GITHUB, "https://github.com/mateuscechetto/MaquiAR"),
             new Link(SocialLinks.YOUTUBE, "https://youtu.be/Ch7qy21mvBo"),
-            new Link(new SocialLink("Thesis", "website", "../../assets/images/buttons-icons/link_icon.png"), "https://repositorio.ufsc.br/handle/123456789/237957")
+            new Link(new SocialLink("MAQUIAR.THESIS", "website", "../../assets/images/buttons-icons/link_icon.png"), "https://repositorio.ufsc.br/handle/123456789/237957")
         ],
         readMore: 'MAQUIAR.READMORE'
     },

@@ -11,7 +11,7 @@
                         <input *ngIf="link.socialLink.icon" class="buttonIcon" type="image"
                             alt="{{link.socialLink.name + ' icon'}}" src="{{link.socialLink.icon}}" height="20"
                             width="20" />
-                        <span>{{ link.socialLink.name }}</span>
+                        <span>{{ link.socialLink.name | translate }}</span>
                     </a>
                 </div>
             </div>
