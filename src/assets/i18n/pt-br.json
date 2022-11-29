@@ -4,6 +4,7 @@
         "RESUME": "Currículo.pdf",
         "URLSHORTENER": "Encurtador de URL",
         "PORTFOLIO": "Este site",
+        "HSSETREVIEWBOT": "Hearthstone Set Review Bot",
         "RECYCLEBIN": "Lixeira"
     },
     "STARTBAR": {
@@ -43,6 +44,12 @@
         "HEADLINE": "Windows XP: Mateus Cechetto Edition",
         "TEXT": "<p>Eu fiz este site como meu portfolio para mostrar alguns dos meus projetos.</p><p>Ele simula um desktop do Windows XP.</p><p>Foi desenvolvido usando <b>Angular, TypeScript, HTML</b> e <b>SCSS</b>.</p>",
         "READMORE": "<hr><ul><li>Os projetos são apresentados em janelas</li><li>As janelas podem ser movidas e redimensionadas</li><li>As janelas recebem o foco quando clicadas</li><li>O usuário pode mudar a janela ativa pela barra Iniciar</li><li>Possui 2 idiomas: Português e Ingles</li><li>Ele reconhece o idioma padrão do usuário e seleciona um dos dois, o padrão é Inglês</li><li>O idioma pode ser mudado em tempo real, sem precisar recarregar a página</li><li>É mobile-friendly</li><li>O relógio atualiza em tempo real</li><li>Possui outros programas, como Paint e Campo Minado</li></ul>"
+    },
+    "HSSETREVIEWBOT": {
+        "TITLE": "Set Review Bot",
+        "HEADLINE": "Twitch chat bot para auxiliar review de novas expansões",
+        "TEXT": "<p>Hearthstone é um jogo de cartas online estratégico baseado em turnos, com milhões de jogadores ativos. São lançadas, por ano, em média 3 expansões, com novas cartas e novas estratégias. Pouco antes de lançarem as expansões, jogadores famosos criam análises das cartas a serem lançadas, os set reviews, dando suas opiniões sobre as cartas.</p><p>Criei esse bot para fazer com que as pessoas que assistem essa análilse possam interagir com ela, dando suas próprias notas, através do chat da Twitch. As notas ficam salvas em um arquivo do Google Sheets.</p><p>O bot foi desenvolvido usando <b>Node, Express, OAuth2, JWT, MongoDB (Mongoose), tmi.js</b> e a <b>API do Google Sheets</b>. Fiz também uma interface simples utilizando <b>React</b> e o deploy foi feito no <b>Heroku</b></p>",
+        "READMORE": "<hr><ul><li>1140 pessoas diferentes deram nota pra alguma carta</li><li>18221 notas foram dadas distribuídas entre as 135 cartas</li><li>32777 mensagens do chat foram lidas e interpretadas pelo bot</li></ul>"
     },
     "URLSHORTENER": {
         "TITLE": "Encurtador de URL",

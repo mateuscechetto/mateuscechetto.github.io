@@ -4,6 +4,7 @@
         "RESUME": "Resume.pdf",
         "URLSHORTENER": "URL Shortener",
         "PORTFOLIO": "This Website",
+        "HSSETREVIEWBOT": "Hearthstone Set Review Bot",
         "RECYCLEBIN": "Recycle Bin"
     },
     "STARTBAR": {
@@ -43,6 +44,12 @@
         "HEADLINE": "Windows XP: Mateus Cechetto Edition",
         "TEXT": "<p>I made this website as my portfolio to show some of my projects.</p><p>It simulates a Windows XP desktop.</p><p>It was created using <b>Angular, TypeScript, HTML</b> and <b>SCSS</b>.</p>",
         "READMORE": "<hr><ul><li>The projects are presented in windows</li><li>The windows can be moved and resized</li><li>Once a window is clicked it gets focused</li><li>The user can change the focused window using the start bar</li><li>It has 2 languages: English and Portuguse</li><li>It recognizes user's browser language and set to one of the two, the default is English</li><li>The language can be changed in real time, without reloading the page</li><li>It is mobile friendly</li><li>The clock updates in real time</li><li>It has other programs such as Paint and Minesweeper</li></ul>"
+    },
+    "HSSETREVIEWBOT": {
+        "TITLE": "Set Review Bot",
+        "HEADLINE": "Twitch chat bot to help Hearthstone set reviews",
+        "TEXT": "<p>Hearthstone is a turn-based digital collectible card game with millions of active players. Every year, between 3 and 4 new sets are released, bringing new cards and strategies to the game. Before the expansions launch, famous players and streamers make set reviews, giving their opinions about the cards.</p><p>I created this bot to make the viewers be part of the review, giving their personal ratings on the cards through Twitch chat. Their ratings are recorded and saved in a Google Sheets document.</p><p>The bot was developed using <b>Node, Express, OAuth2, JWT, MongoDB (Mongoose), tmi.js</b> and <b>Google Sheets API</b>. I also made a simple frontend using <b>React</b> and deployed it on <b>Heroku</b></p>",
+        "READMORE": "<hr><ul><li>1140 different people rated cards</li><li>Total of 18221 ratings given for the 135 cards</li><li>32777 twitch chat messages read</li></ul>"
     },
     "URLSHORTENER": {
         "TITLE": "URL Shortener",

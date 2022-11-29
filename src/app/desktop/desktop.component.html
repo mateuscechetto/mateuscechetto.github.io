@@ -8,6 +8,9 @@
     <app-project [project]="maquiAR" [program]="maquiARProgram" (activateProgram)="makeProgramActive($event)"
         (closeProgram)="closeProgram($event)">
     </app-project>
+    <app-project [project]="hsSetReviewBot" [program]="hsSetReviewBotProgram" (activateProgram)="makeProgramActive($event)"
+        (closeProgram)="closeProgram($event)">
+    </app-project>
     <app-about [program]="aboutProgram" (activateProgram)="makeProgramActive($event)"
         (closeProgram)="closeProgram($event)"></app-about>
 
@@ -34,14 +37,20 @@
             <p>{{'DESKTOP.PORTFOLIO' | translate }}</p>
         </div>
         <div class="left icon">
+            <input class="folder" id="hsSetReviewBot" type="image" alt="hsSetReviewBot" [title]="'DESKTOP.HSSETREVIEWBOT' | translate"
+                src="../../assets/images/buttons-icons/folder_icon.png" height="50" width="50"
+                (click)="makeProgramActive('hsSetReviewBot')" />
+            <p>{{'DESKTOP.HSSETREVIEWBOT' | translate }}</p>
+        </div>
+        <div class="left icon">
             <input class="folder" id="urlShortener" type="image" alt="url shortener"
                 [title]="'DESKTOP.URLSHORTENER' | translate" src="../../assets/images/buttons-icons/folder_icon.png"
                 height="50" width="50" (click)="makeProgramActive('urlShortener')" />
             <p>{{'DESKTOP.URLSHORTENER' | translate }}</p>
         </div>
         <div class="left icon">
-            <a [href]="'RESUMELINK' | translate " target="_blank"><input class="resume" id="resume"
-                    type="image" alt="resume" [title]="'DESKTOP.RESUME' | translate"
+            <a [href]="'RESUMELINK' | translate " target="_blank"><input class="resume" id="resume" type="image"
+                    alt="resume" [title]="'DESKTOP.RESUME' | translate"
                     src="../../assets/images/buttons-icons/pdf_icon.png" height="50" width="50" /></a>
             <p>{{'DESKTOP.RESUME' | translate }}</p>
         </div>

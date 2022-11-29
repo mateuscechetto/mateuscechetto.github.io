@@ -29,6 +29,20 @@ export const PROJECTS = {
         ],
         readMore: 'MAQUIAR.READMORE'
     },
+    hsSetReviewBot: {
+        headline: 'HSSETREVIEWBOT.HEADLINE',
+        title: 'HSSETREVIEWBOT.TITLE',
+        text: 'HSSETREVIEWBOT.TEXT',
+        images: [
+            new ImageItem({ src: "../../assets/images/hs-set-review-bot/hs-review-bot.png" }),
+        ],
+        techs: ["Node", "Express", "OAuth2", "Google Sheets API", "React", "Heroku"],
+        links: [
+            new Link(SocialLinks.GITHUB, "https://github.com/mateuscechetto/hearthstone-set-review-bot"),
+            new Link(SocialLinks.WEBSITE, "https://hs-set-review.herokuapp.com/")
+        ],
+        readMore: 'HSSETREVIEWBOT.READMORE'
+    },
     urlShortener: {
         headline: 'URLSHORTENER.HEADLINE',
         title: 'URLSHORTENER.TITLE',
