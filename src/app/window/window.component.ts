@@ -14,7 +14,7 @@ export class WindowComponent implements OnInit {
   @Output() closeProgram = new EventEmitter<string>();
   @Output() windowResizing = new EventEmitter<IResizeEvent>();
   @Input() classes: string[] = [];
-
+  
 
   constructor() { }
 
