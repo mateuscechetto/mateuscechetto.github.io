@@ -1,12 +1,15 @@
-import { DOCUMENT } from '@angular/common';
+import { DOCUMENT, NgFor } from '@angular/common';
 import { Component, HostListener, Inject, OnInit, ViewEncapsulation } from '@angular/core';
 import { WindowComponent } from '../window/window.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-about',
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.scss'],
-  encapsulation: ViewEncapsulation.None
+    selector: 'app-about',
+    templateUrl: './about.component.html',
+    styleUrls: ['./about.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: true,
+    imports: [WindowComponent, NgFor, TranslateModule]
 })
 export class AboutComponent extends WindowComponent implements OnInit {
 

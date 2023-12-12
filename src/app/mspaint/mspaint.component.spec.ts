@@ -8,8 +8,8 @@ describe('MspaintComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MspaintComponent ]
-    })
+    imports: [MspaintComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(MspaintComponent);

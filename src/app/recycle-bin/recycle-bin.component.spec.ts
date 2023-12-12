@@ -8,8 +8,8 @@ describe('RecycleBinComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RecycleBinComponent ]
-    })
+    imports: [RecycleBinComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(RecycleBinComponent);

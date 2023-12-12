@@ -8,8 +8,8 @@ describe('WindowComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ WindowComponent ]
-    })
+    imports: [WindowComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(WindowComponent);

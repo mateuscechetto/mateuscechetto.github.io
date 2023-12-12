@@ -1,17 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
-import { TranslateService } from '@ngx-translate/core';
+import { TranslateService, TranslateModule } from '@ngx-translate/core';
 import { distinctUntilChanged } from 'rxjs';
 
 import { Position } from 'angular2-draggable';
 
 import { ProgramData } from '../models/ProgramData';
 import { Project, PROJECTS } from '../models/Project';
+import { StartBarComponent } from '../start-bar/start-bar.component';
+import { MinesweeperComponent } from '../minesweeper/minesweeper.component';
+import { MspaintComponent } from '../mspaint/mspaint.component';
+import { RecycleBinComponent } from '../recycle-bin/recycle-bin.component';
+import { AboutComponent } from '../about/about.component';
+import { ProjectComponent } from '../project/project.component';
 
 @Component({
-  selector: 'app-desktop',
-  templateUrl: './desktop.component.html',
-  styleUrls: ['./desktop.component.scss']
+    selector: 'app-desktop',
+    templateUrl: './desktop.component.html',
+    styleUrls: ['./desktop.component.scss'],
+    standalone: true,
+    imports: [ProjectComponent, AboutComponent, RecycleBinComponent, MspaintComponent, MinesweeperComponent, StartBarComponent, TranslateModule]
 })
 export class DesktopComponent implements OnInit {
 

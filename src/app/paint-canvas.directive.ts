@@ -6,7 +6,8 @@ declare interface Position {
 }
 
 @Directive({
-  selector: '[paintCanvas]'
+    selector: '[paintCanvas]',
+    standalone: true
 })
 export class PaintCanvasDirective {
 

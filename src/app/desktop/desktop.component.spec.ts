@@ -8,8 +8,8 @@ describe('DesktopComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DesktopComponent ]
-    })
+    imports: [DesktopComponent]
+})
     .compileComponents();
   });
 

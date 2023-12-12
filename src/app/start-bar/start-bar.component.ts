@@ -1,11 +1,16 @@
 import { Component, EventEmitter, HostListener, Input, OnInit, Output } from '@angular/core';
 import { ProgramData } from '../models/ProgramData';
 import { Time } from '../models/Time';
+import { TranslateModule } from '@ngx-translate/core';
+import { NgClass, NgFor } from '@angular/common';
+import { ClickOutsideDirective } from '../click-outside.directive';
 
 @Component({
-  selector: 'app-start-bar',
-  templateUrl: './start-bar.component.html',
-  styleUrls: ['./start-bar.component.scss']
+    selector: 'app-start-bar',
+    templateUrl: './start-bar.component.html',
+    styleUrls: ['./start-bar.component.scss'],
+    standalone: true,
+    imports: [ClickOutsideDirective, NgClass, NgFor, TranslateModule]
 })
 export class StartBarComponent implements OnInit {
 

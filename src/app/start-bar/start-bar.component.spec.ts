@@ -8,8 +8,8 @@ describe('StartBarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StartBarComponent ]
-    })
+    imports: [StartBarComponent]
+})
     .compileComponents();
   });
 

@@ -1,11 +1,16 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { IResizeEvent } from 'angular2-draggable/lib/models/resize-event';
 import { ProgramData } from '../models/ProgramData';
+import { TranslateModule } from '@ngx-translate/core';
+import { NgClass } from '@angular/common';
+import { AngularDraggableModule } from 'angular2-draggable';
 
 @Component({
-  selector: 'app-window',
-  templateUrl: './window.component.html',
-  styleUrls: ['./window.component.scss']
+    selector: 'app-window',
+    templateUrl: './window.component.html',
+    styleUrls: ['./window.component.scss'],
+    standalone: true,
+    imports: [AngularDraggableModule, NgClass, TranslateModule]
 })
 export class WindowComponent implements OnInit {
 

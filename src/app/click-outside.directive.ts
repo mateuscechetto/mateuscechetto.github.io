@@ -3,7 +3,8 @@ import { Directive, ElementRef, EventEmitter, Inject, Output } from '@angular/co
 import { filter, fromEvent, Subscription } from 'rxjs';
 
 @Directive({
-  selector: '[clickOutside]'
+    selector: '[clickOutside]',
+    standalone: true
 })
 export class ClickOutsideDirective {
 
