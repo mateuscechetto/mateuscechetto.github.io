@@ -2,14 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { WindowComponent } from '../window/window.component';
 import { Cell } from './Cell';
 import { TranslateModule } from '@ngx-translate/core';
-import { NgClass, NgFor } from '@angular/common';
+import { NgClass } from '@angular/common';
 
 @Component({
     selector: 'app-minesweeper',
     templateUrl: './minesweeper.component.html',
     styleUrls: ['./minesweeper.component.scss'],
     standalone: true,
-    imports: [WindowComponent, NgClass, NgFor, TranslateModule]
+    imports: [WindowComponent, NgClass, TranslateModule]
 })
 export class MinesweeperComponent extends WindowComponent implements OnInit {
 

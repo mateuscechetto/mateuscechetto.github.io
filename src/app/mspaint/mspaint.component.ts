@@ -3,14 +3,14 @@ import { IResizeEvent } from 'angular2-draggable/lib/models/resize-event';
 import { WindowComponent } from '../window/window.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { PaintCanvasDirective } from '../paint-canvas.directive';
-import { NgFor, KeyValuePipe } from '@angular/common';
+import { KeyValuePipe } from '@angular/common';
 
 @Component({
     selector: 'app-mspaint',
     templateUrl: './mspaint.component.html',
     styleUrls: ['./mspaint.component.scss'],
     standalone: true,
-    imports: [WindowComponent, NgFor, PaintCanvasDirective, KeyValuePipe, TranslateModule]
+    imports: [WindowComponent, PaintCanvasDirective, KeyValuePipe, TranslateModule]
 })
 export class MspaintComponent extends WindowComponent implements OnInit {
 

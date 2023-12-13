@@ -1,125 +1,127 @@
 <div class="startBar">
-    <div clickOutside (clickOutside)="hideStartMenu()">
-        <div class="startButton" (click)="toggleStartMenu()">
-            <input id="start_button" type="image" alt="Start Button" src="../../assets/images/buttons-icons/xp_logo.png"
-                height="28" width="28" />
-            <span>{{ 'STARTBAR.START' | translate }}</span>
-        </div>
-        <div class="startMenu" [ngClass]="{'show': shouldShowStartMenu}">
-            <div class="startMenuHeader">
-                <input class="userImage" type="image" alt="User Icon"
-                    src="../../assets/images/buttons-icons/user_icon.png" height="50" width="50" />
-                <span>{{"STARTBAR.USER" | translate }}</span>
-            </div>
-            <div class="startMenuContent">
-                <div class="button" (click)="makeProgramActive('maquiAR')">
-                    <input type="image" alt="Folder Icon" src="../../assets/images/buttons-icons/folder_icon.png"
-                        height="26" width="26" />
-                    <span>{{'DESKTOP.MAQUIAR' | translate }}</span>
-                </div>
-                <div class="button" (click)="makeProgramActive('portfolio')">
-                    <input type="image" alt="Folder Icon" src="../../assets/images/buttons-icons/folder_icon.png"
-                        height="26" width="26" />
-                    <span>{{'DESKTOP.PORTFOLIO' | translate }}</span>
+  <div clickOutside (clickOutside)="hideStartMenu()">
+    <div class="startButton" (click)="toggleStartMenu()">
+      <input id="start_button" type="image" alt="Start Button" src="../../assets/images/buttons-icons/xp_logo.png"
+        height="28" width="28" />
+        <span>{{ 'STARTBAR.START' | translate }}</span>
+      </div>
+      <div class="startMenu" [ngClass]="{'show': shouldShowStartMenu}">
+        <div class="startMenuHeader">
+          <input class="userImage" type="image" alt="User Icon"
+            src="../../assets/images/buttons-icons/user_icon.png" height="50" width="50" />
+            <span>{{"STARTBAR.USER" | translate }}</span>
+          </div>
+          <div class="startMenuContent">
+            <div class="button" (click)="makeProgramActive('maquiAR')">
+              <input type="image" alt="Folder Icon" src="../../assets/images/buttons-icons/folder_icon.png"
+                height="26" width="26" />
+                <span>{{'DESKTOP.MAQUIAR' | translate }}</span>
+              </div>
+              <div class="button" (click)="makeProgramActive('portfolio')">
+                <input type="image" alt="Folder Icon" src="../../assets/images/buttons-icons/folder_icon.png"
+                  height="26" width="26" />
+                  <span>{{'DESKTOP.PORTFOLIO' | translate }}</span>
                 </div>
                 <div class="button" (click)="makeProgramActive('hsSetReviewBot')">
-                    <input type="image" alt="Folder Icon" src="../../assets/images/buttons-icons/folder_icon.png"
-                        height="26" width="26" />
+                  <input type="image" alt="Folder Icon" src="../../assets/images/buttons-icons/folder_icon.png"
+                    height="26" width="26" />
                     <span>{{'DESKTOP.HSSETREVIEWBOT' | translate }}</span>
-                </div>
-                <div class="button" (click)="makeProgramActive('urlShortener')">
+                  </div>
+                  <div class="button" (click)="makeProgramActive('urlShortener')">
                     <input type="image" alt="Folder Icon" src="../../assets/images/buttons-icons/folder_icon.png"
-                        height="26" width="26" />
-                    <span>{{'DESKTOP.URLSHORTENER' | translate }}</span>
-                </div>
-                <a [href]="'RESUMELINK' | translate " target="_blank">
-                    <div class="button">
+                      height="26" width="26" />
+                      <span>{{'DESKTOP.URLSHORTENER' | translate }}</span>
+                    </div>
+                    <a [href]="'RESUMELINK' | translate " target="_blank">
+                      <div class="button">
                         <input type="image" alt="Folder Icon" src="../../assets/images/buttons-icons/pdf_icon.png"
+                          height="26" width="26" />
+                          <span>{{'DESKTOP.RESUME' | translate }}</span>
+                        </div>
+                      </a>
+                      <div class="button" (click)="makeProgramActive('recycleBin')">
+                        <input type="image" alt="recycleBin Icon"
+                          src="../../assets/images/buttons-icons/recycle-bin_icon.png" height="26" width="26" />
+                          <span>{{'DESKTOP.RECYCLEBIN' | translate }}</span>
+                        </div>
+                        <div class="button expand" (mouseenter)="showSocialSubMenu()" (mouseleave)="hideSocialSubMenu()">
+                          <input type="image" alt="Languages Icon" src="../../assets/images/buttons-icons/folder_icon.png"
                             height="26" width="26" />
-                        <span>{{'DESKTOP.RESUME' | translate }}</span>
-                    </div>
-                </a>
-                <div class="button" (click)="makeProgramActive('recycleBin')">
-                    <input type="image" alt="recycleBin Icon"
-                        src="../../assets/images/buttons-icons/recycle-bin_icon.png" height="26" width="26" />
-                    <span>{{'DESKTOP.RECYCLEBIN' | translate }}</span>
-                </div>
-                <div class="button expand" (mouseenter)="showSocialSubMenu()" (mouseleave)="hideSocialSubMenu()">
-                    <input type="image" alt="Languages Icon" src="../../assets/images/buttons-icons/folder_icon.png"
-                        height="26" width="26" />
-                    <span>{{'STARTBAR.CONTACT' | translate}}</span>
-                    <div class="arrow-right"></div>
-                </div>
-                <div id="socialSubMenu" class="subMenu" [ngClass]="{'show': shouldShowSocialSubMenu}"
-                    (mouseenter)="showSocialSubMenu()" (mouseleave)="hideSocialSubMenu()">
-                    <a href="https://www.linkedin.com/in/mateuscechetto/" target="_blank">
-                        <div class="button">
-                            <input id="linkedIn" type="image" alt="LinkedIn"
-                                src="../../assets/images/buttons-icons/linkedin_icon.png" height="26" width="26" />
-                            <span>LinkedIn</span>
-                        </div>
-                    </a>
-                    <a href="https://github.com/mateuscechetto" target="_blank">
-                        <div class="button">
-                            <input id="github" type="image" alt="GitHub"
-                                src="../../assets/images/buttons-icons/github_icon.png" height="26" width="26" />
-                            <span>GitHub</span>
-                        </div>
-                    </a>
-                    <a href="mailto:mateuscechetto@gmail.com">
-                        <div class="button">
-                            <input id="email" type="image" alt="Email"
-                                src="../../assets/images/buttons-icons/email_icon.png" height="26" width="26" />
-                            <span>Email</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="button expand" (mouseenter)="showProgramsSubMenu()" (mouseleave)="hideProgramsSubMenu()">
-                    <input type="image" alt="Languages Icon" src="../../assets/images/buttons-icons/folder_icon.png"
-                        height="26" width="26" />
-                    <span>{{'STARTBAR.PROGRAMS' | translate}}</span>
-                    <div class="arrow-right"></div>
-                </div>
-                <div id="programsSubMenu" class="subMenu" [ngClass]="{'show': shouldShowProgramsSubMenu}"
-                    (mouseenter)="showProgramsSubMenu()" (mouseleave)="hideProgramsSubMenu()">
-                    <div class="button" (click)="makeProgramActive('msPaint')">
-                        <input id="msPaint" type="image" alt="msPaint"
-                            src="../../assets/images/buttons-icons/mspaint_icon.png" height="26" width="26" />
-                        <span>{{ 'MSPAINT.TITLE' | translate }}</span>
-                    </div>
-                    <div class="button" (click)="makeProgramActive('minesweeper')">
-                        <input id="minesweeper" type="image" alt="minesweeper"
-                            src="../../assets/images/minesweeper/Minesweeper_icon.png" height="26" width="26" />
-                        <span>{{ 'MINESWEEPER.TITLE' | translate }}</span>
-                    </div>
-                </div>
-                <div class="button" (click)="makeProgramActive('about')">
-                    <input type="image" alt="Folder Icon" src="../../assets/images/buttons-icons/Info_icon.png"
-                        height="26" width="26" />
-                    <span>{{"STARTBAR.ABOUT" | translate }}</span>
-                </div>
-                <div class="button expand" (mouseenter)="showLanguagesSubMenu()" (mouseleave)="hideLanguagesSubMenu()">
-                    <input type="image" alt="Languages Icon" src="../../assets/images/buttons-icons/languages_icon.png"
-                        height="26" width="26" />
-                    <span>{{"STARTBAR.LANGUAGES" | translate }}</span>
-                    <div class="arrow-right"></div>
-                </div>
-                <div id="languagesSubMenu" class="subMenu" [ngClass]="{'show': shouldShowLanguagesSubMenu}"
-                    (mouseenter)="showLanguagesSubMenu()" (mouseleave)="hideLanguagesSubMenu()">
-                    <div class="button" (click)="changeLanguage('en-US')">ENGLISH</div>
-                    <div class="button" (click)="changeLanguage('pt-BR')">PORTUGUÊS</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="startBarOpenedPrograms">
-        <div class="program" *ngFor="let program of programs" [ngClass]="{'active': program.isFocused }"
-            (click)="makeProgramActive(program.key)">
-            <input type="image" src="{{program.iconPath}}" alt="folderIcon" height="28" width="28" />
-            <span> {{ program.title | translate }} </span>
-        </div>
-    </div>
-    <div class="clock">
-        <span>{{time.hours}}:{{time.minutes}}{{time.amPm}}</span>
-    </div>
-</div>
+                            <span>{{'STARTBAR.CONTACT' | translate}}</span>
+                            <div class="arrow-right"></div>
+                          </div>
+                          <div id="socialSubMenu" class="subMenu" [ngClass]="{'show': shouldShowSocialSubMenu}"
+                            (mouseenter)="showSocialSubMenu()" (mouseleave)="hideSocialSubMenu()">
+                            <a href="https://www.linkedin.com/in/mateuscechetto/" target="_blank">
+                              <div class="button">
+                                <input id="linkedIn" type="image" alt="LinkedIn"
+                                  src="../../assets/images/buttons-icons/linkedin_icon.png" height="26" width="26" />
+                                  <span>LinkedIn</span>
+                                </div>
+                              </a>
+                              <a href="https://github.com/mateuscechetto" target="_blank">
+                                <div class="button">
+                                  <input id="github" type="image" alt="GitHub"
+                                    src="../../assets/images/buttons-icons/github_icon.png" height="26" width="26" />
+                                    <span>GitHub</span>
+                                  </div>
+                                </a>
+                                <a href="mailto:mateuscechetto@gmail.com">
+                                  <div class="button">
+                                    <input id="email" type="image" alt="Email"
+                                      src="../../assets/images/buttons-icons/email_icon.png" height="26" width="26" />
+                                      <span>Email</span>
+                                    </div>
+                                  </a>
+                                </div>
+                                <div class="button expand" (mouseenter)="showProgramsSubMenu()" (mouseleave)="hideProgramsSubMenu()">
+                                  <input type="image" alt="Languages Icon" src="../../assets/images/buttons-icons/folder_icon.png"
+                                    height="26" width="26" />
+                                    <span>{{'STARTBAR.PROGRAMS' | translate}}</span>
+                                    <div class="arrow-right"></div>
+                                  </div>
+                                  <div id="programsSubMenu" class="subMenu" [ngClass]="{'show': shouldShowProgramsSubMenu}"
+                                    (mouseenter)="showProgramsSubMenu()" (mouseleave)="hideProgramsSubMenu()">
+                                    <div class="button" (click)="makeProgramActive('msPaint')">
+                                      <input id="msPaint" type="image" alt="msPaint"
+                                        src="../../assets/images/buttons-icons/mspaint_icon.png" height="26" width="26" />
+                                        <span>{{ 'MSPAINT.TITLE' | translate }}</span>
+                                      </div>
+                                      <div class="button" (click)="makeProgramActive('minesweeper')">
+                                        <input id="minesweeper" type="image" alt="minesweeper"
+                                          src="../../assets/images/minesweeper/Minesweeper_icon.png" height="26" width="26" />
+                                          <span>{{ 'MINESWEEPER.TITLE' | translate }}</span>
+                                        </div>
+                                      </div>
+                                      <div class="button" (click)="makeProgramActive('about')">
+                                        <input type="image" alt="Folder Icon" src="../../assets/images/buttons-icons/Info_icon.png"
+                                          height="26" width="26" />
+                                          <span>{{"STARTBAR.ABOUT" | translate }}</span>
+                                        </div>
+                                        <div class="button expand" (mouseenter)="showLanguagesSubMenu()" (mouseleave)="hideLanguagesSubMenu()">
+                                          <input type="image" alt="Languages Icon" src="../../assets/images/buttons-icons/languages_icon.png"
+                                            height="26" width="26" />
+                                            <span>{{"STARTBAR.LANGUAGES" | translate }}</span>
+                                            <div class="arrow-right"></div>
+                                          </div>
+                                          <div id="languagesSubMenu" class="subMenu" [ngClass]="{'show': shouldShowLanguagesSubMenu}"
+                                            (mouseenter)="showLanguagesSubMenu()" (mouseleave)="hideLanguagesSubMenu()">
+                                            <div class="button" (click)="changeLanguage('en-US')">ENGLISH</div>
+                                            <div class="button" (click)="changeLanguage('pt-BR')">PORTUGUÊS</div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="startBarOpenedPrograms">
+                                      @for (program of programs; track program) {
+                                        <div class="program" [ngClass]="{'active': program.isFocused }"
+                                          (click)="makeProgramActive(program.key)">
+                                          <input type="image" src="{{program.iconPath}}" alt="folderIcon" height="28" width="28" />
+                                          <span> {{ program.title | translate }} </span>
+                                        </div>
+                                      }
+                                    </div>
+                                    <div class="clock">
+                                      <span>{{time.hours}}:{{time.minutes}}{{time.amPm}}</span>
+                                    </div>
+                                  </div>

@@ -1,12 +1,14 @@
 <app-window [program]="program" [classes]="['about']" (activateProgram)="makeWindowActive()"
-(closeProgram)="closeWindow()" id="aboutWindow">
-    <div class="content">
-        <h3> {{ "ABOUT.GREETING.HEADLINE" | translate }} </h3>
-        <h4> {{ "ABOUT.GREETING.TEXT" | translate }} </h4>
-        <div [innerHTML]=" 'ABOUT.TEXT' | translate"></div>
-        <div class="tips" (click)="toggleFullScreen()">
-            <span>{{ "ABOUT.TIPS.TEXT" | translate }}</span>
-            <p *ngFor="let tip of tips"> {{ tip | translate }} </p>
-        </div>
+  (closeProgram)="closeWindow()" id="aboutWindow">
+  <div class="content">
+    <h3> {{ "ABOUT.GREETING.HEADLINE" | translate }} </h3>
+    <h4> {{ "ABOUT.GREETING.TEXT" | translate }} </h4>
+    <div [innerHTML]=" 'ABOUT.TEXT' | translate"></div>
+    <div class="tips" (click)="toggleFullScreen()">
+      <span>{{ "ABOUT.TIPS.TEXT" | translate }}</span>
+      @for (tip of tips; track tip) {
+        <p> {{ tip | translate }} </p>
+      }
     </div>
+  </div>
 </app-window>
