@@ -5,6 +5,7 @@
         "URLSHORTENER": "Encurtador de URL",
         "PORTFOLIO": "Este site",
         "HSSETREVIEWBOT": "Hearthstone Set Review Bot",
+        "HSSETREVIEWSITE": "Hearthstone Set Review Hub",
         "RECYCLEBIN": "Lixeira"
     },
     "STARTBAR": {
@@ -26,7 +27,6 @@
             "TEXT": "Dicas:",
             "1": "Você pode mover e mudar o tamanho desta janela",
             "2": "Você pode mudar a idioma no menu Iniciar",
-            "3": "Você pode abrir o menu Iniciar apertando a tecla Windows",
             "4": "Você pode fechar o menu inciar clicando em outro lugar da tela",
             "5": "Você pode mudar a janela ativa pela barra do Iniciar",
             "6": "Você pode abrir em tela cheia apertando F11 ou clicando aqui"
@@ -50,6 +50,12 @@
         "HEADLINE": "Twitch chat bot para auxiliar review de novas expansões",
         "TEXT": "<p>Hearthstone é um jogo de cartas online estratégico baseado em turnos, com milhões de jogadores ativos. São lançadas, por ano, em média 3 expansões, com novas cartas e novas estratégias. Pouco antes de lançarem as expansões, jogadores famosos criam análises das cartas a serem lançadas, os set reviews, dando suas opiniões sobre as cartas.</p><p>Criei esse bot para fazer com que as pessoas que assistem essa análilse possam interagir com ela, dando suas próprias notas, através do chat da Twitch. As notas ficam salvas em um arquivo do Google Sheets.</p><p>O bot foi desenvolvido usando <b>Node, Express, OAuth2, JWT, MongoDB (Mongoose), tmi.js</b> e a <b>API do Google Sheets</b>. Fiz também uma interface simples utilizando <b>React</b> e o deploy foi feito no <b>Heroku</b></p>",
         "READMORE": "<hr><ul><li>1140 pessoas diferentes deram nota pra alguma carta</li><li>18221 notas foram dadas distribuídas entre as 135 cartas</li><li>32777 mensagens do chat foram lidas e interpretadas pelo bot</li></ul>"
+    },
+    "HSSETREVIEWSITE": {
+        "TITLE": "Set Review Hub",
+        "HEADLINE": "Hearthstone Set Review Hub",
+        "TEXT": "<p>Depois de receber elogios pelo Set Review Bot, decidi evoluí-lo para uma plataforma que centraliza as informações sobre análise de cartas e permite que qualquer usuário crie sua própria análise; mantendo o bot para que os streamers registrem as avaliações do chat.</p><p>Mantendo o mesmo backend do Set Review Bot, decidi mudar o frontend para <b>Angular</b> com <b>PrimeNG</b>, tecnologias que estou mais familiarizado, sendo capaz de fazer o deploy a tempo para a expansão \"Showdown in the Badlands\", lançada em novembro de 2023. <b>Em uma semana, mais de 80 usuários</b> criaram uma conta no sistema.</p><p>Após lançar o site, pessoas entraram em contato comigo querendo contribuir para o projeto, o que me levou a adaptar o projeto para seguir os padrões comunitários de código aberto. Um desses desenvolvedores era membro do Untapped.gg (empresa que criou a ferramenta de rastreamento de baralhos mais popular para Hearthstone) e forneceu dados sobre as cartas após o lançamento da expansão.</p><p>Com esses dados, eu e um amigo treinamos modelos de classificação, usando as bibliotecas <b>Python Pandas</b> e <b>scikit-learn</b>, para dar notas às cartas com base em sua popularidade e taxa de vitória. O modelo alcançou uma acurácia satisfatória (cerca de 74%) e usamos essas notas para comparar com as notas dos usuários antes da expansão e para classificar as melhores análises.</p>",
+        "READMORE": "<hr><p>Na segunda expansão que o site cobriu, os resultados foram ainda melhores:</p><ul><li><b>230 usuários</b> logaram e avaliaram ao menos 1 carta</li><li><b>Mais de 700 usuários</b> avaliaram cartas <b>simultâneamente</b> através do chat da Twitch.</li><li>A plataforma ganhou visibilidade, sendo usada por streamers populares, incluindo o atual campeão mundial</li></ul>"
     },
     "URLSHORTENER": {
         "TITLE": "Encurtador de URL",

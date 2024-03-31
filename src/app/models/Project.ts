@@ -39,9 +39,25 @@ export const PROJECTS = {
         techs: ["Node", "Express", "OAuth2", "Google Sheets API", "React", "Heroku"],
         links: [
             new Link(SocialLinks.GITHUB, "https://github.com/mateuscechetto/hearthstone-set-review-bot"),
-            new Link(SocialLinks.WEBSITE, "https://hs-set-review.herokuapp.com/")
         ],
         readMore: 'HSSETREVIEWBOT.READMORE'
+    },
+    hsSetReviewSite: {
+        headline: 'HSSETREVIEWSITE.HEADLINE',
+        title: 'HSSETREVIEWSITE.TITLE',
+        text: 'HSSETREVIEWSITE.TEXT',
+        images: [
+            new ImageItem({ src: "../../assets/images/hs-set-review-hub/home-1.png" }),
+            new ImageItem({ src: "../../assets/images/hs-set-review-hub/home-2.png" }),
+            new ImageItem({ src: "../../assets/images/hs-set-review-hub/review-page.png" }),
+
+        ],
+        techs: ["Node", "Express", "MongoDB", "OAuth2", "Angular", "PrimeNG", "Heroku", "Python" , "Pandas", "scikit-learn"],
+        links: [
+            new Link(SocialLinks.GITHUB, "https://github.com/mateuscechetto/hearthstone-set-review-bot"),
+            new Link(SocialLinks.WEBSITE, "https://hs-set-review.herokuapp.com/")
+        ],
+        readMore: 'HSSETREVIEWSITE.READMORE'
     },
     urlShortener: {
         headline: 'URLSHORTENER.HEADLINE',

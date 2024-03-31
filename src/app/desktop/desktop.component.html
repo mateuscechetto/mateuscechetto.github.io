@@ -1,89 +1,194 @@
 <div class="desktop" #desktop>
-    <app-project [project]="urlShortener" [program]="urlShortenerProgram" (activateProgram)="makeProgramActive($event)"
-        (closeProgram)="closeProgram($event)">
-    </app-project>
-    <app-project [project]="portfolio" [program]="portfolioProgram" (activateProgram)="makeProgramActive($event)"
-        (closeProgram)="closeProgram($event)">
-    </app-project>
-    <app-project [project]="maquiAR" [program]="maquiARProgram" (activateProgram)="makeProgramActive($event)"
-        (closeProgram)="closeProgram($event)">
-    </app-project>
-    <app-project [project]="hsSetReviewBot" [program]="hsSetReviewBotProgram" (activateProgram)="makeProgramActive($event)"
-        (closeProgram)="closeProgram($event)">
-    </app-project>
-    <app-about [program]="aboutProgram" (activateProgram)="makeProgramActive($event)"
-        (closeProgram)="closeProgram($event)"></app-about>
+  <app-project
+    [project]="portfolio"
+    [program]="portfolioProgram"
+    (activateProgram)="makeProgramActive($event)"
+    (closeProgram)="closeProgram($event)"
+  >
+  </app-project>
+  <app-project
+    [project]="maquiAR"
+    [program]="maquiARProgram"
+    (activateProgram)="makeProgramActive($event)"
+    (closeProgram)="closeProgram($event)"
+  >
+  </app-project>
+  <app-project
+    [project]="hsSetReviewBot"
+    [program]="hsSetReviewBotProgram"
+    (activateProgram)="makeProgramActive($event)"
+    (closeProgram)="closeProgram($event)"
+  >
+  </app-project>
+  <app-project
+    [project]="hsSetReviewSite"
+    [program]="hsSetReviewSiteProgram"
+    (activateProgram)="makeProgramActive($event)"
+    (closeProgram)="closeProgram($event)"
+  >
+  </app-project>
+  <app-about
+    [program]="aboutProgram"
+    (activateProgram)="makeProgramActive($event)"
+    (closeProgram)="closeProgram($event)"
+  ></app-about>
 
-    <app-recycle-bin [program]="recycleBinProgram" (activateProgram)="makeProgramActive($event)"
-        (closeProgram)="closeProgram($event)"></app-recycle-bin>
-    <app-project [project]="moreAboutMe" [program]="moreAboutMeProgram" (activateProgram)="makeProgramActive($event)"
-        (closeProgram)="closeProgram($event)"></app-project>
-    <app-mspaint [program]="msPaintProgram" (activateProgram)="makeProgramActive($event)"
-        (closeProgram)="closeProgram($event)"></app-mspaint>
-    <app-minesweeper [program]="minesweeperProgram" (activateProgram)="makeProgramActive($event)"
-        (closeProgram)="closeProgram($event)"></app-minesweeper>
+  <app-recycle-bin
+    [program]="recycleBinProgram"
+    (activateProgram)="makeProgramActive($event)"
+    (closeProgram)="closeProgram($event)"
+  ></app-recycle-bin>
+  <app-project
+    [project]="moreAboutMe"
+    [program]="moreAboutMeProgram"
+    (activateProgram)="makeProgramActive($event)"
+    (closeProgram)="closeProgram($event)"
+  ></app-project>
+  <app-mspaint
+    [program]="msPaintProgram"
+    (activateProgram)="makeProgramActive($event)"
+    (closeProgram)="closeProgram($event)"
+  ></app-mspaint>
+  <app-minesweeper
+    [program]="minesweeperProgram"
+    (activateProgram)="makeProgramActive($event)"
+    (closeProgram)="closeProgram($event)"
+  ></app-minesweeper>
 
-    <div class="left leftSide">
-        <div class="left icon">
-            <input class="folder" id="maquiAR" type="image" alt="maquiAR" [title]="'DESKTOP.MAQUIAR' | translate"
-                src="../../assets/images/buttons-icons/folder_icon.png" height="50" width="50"
-                (click)="makeProgramActive('maquiAR')" />
-            <p>{{'DESKTOP.MAQUIAR' | translate }}</p>
-        </div>
-        <div class="left icon">
-            <input class="folder" id="portfolio" type="image" alt="portfolio" [title]="'DESKTOP.PORTFOLIO' | translate"
-                src="../../assets/images/buttons-icons/folder_icon.png" height="50" width="50"
-                (click)="makeProgramActive('portfolio')" />
-            <p>{{'DESKTOP.PORTFOLIO' | translate }}</p>
-        </div>
-        <div class="left icon">
-            <input class="folder" id="hsSetReviewBot" type="image" alt="hsSetReviewBot" [title]="'DESKTOP.HSSETREVIEWBOT' | translate"
-                src="../../assets/images/buttons-icons/folder_icon.png" height="50" width="50"
-                (click)="makeProgramActive('hsSetReviewBot')" />
-            <p>{{'DESKTOP.HSSETREVIEWBOT' | translate }}</p>
-        </div>
-        <div class="left icon">
-            <input class="folder" id="urlShortener" type="image" alt="url shortener"
-                [title]="'DESKTOP.URLSHORTENER' | translate" src="../../assets/images/buttons-icons/folder_icon.png"
-                height="50" width="50" (click)="makeProgramActive('urlShortener')" />
-            <p>{{'DESKTOP.URLSHORTENER' | translate }}</p>
-        </div>
-        <div class="left icon">
-            <a [href]="'RESUMELINK' | translate " target="_blank"><input class="resume" id="resume" type="image"
-                    alt="resume" [title]="'DESKTOP.RESUME' | translate"
-                    src="../../assets/images/buttons-icons/pdf_icon.png" height="50" width="50" /></a>
-            <p>{{'DESKTOP.RESUME' | translate }}</p>
-        </div>
-        <div class="left icon">
-            <input class="recycleBin" id="recycleBin" type="image" alt="url shortener"
-                [title]="'DESKTOP.RECYCLEBIN' | translate" src="../../assets/images/buttons-icons/recycle-bin_icon.png"
-                height="50" width="50" (click)="makeProgramActive('recycleBin')" />
-            <p>{{'DESKTOP.RECYCLEBIN' | translate }}</p>
-        </div>
+  <div class="left leftSide">
+    <div class="left icon">
+      <input
+        class="folder"
+        id="hsSetReviewBot"
+        type="image"
+        alt="hsSetReviewBot"
+        [title]="'DESKTOP.HSSETREVIEWBOT' | translate"
+        src="../../assets/images/buttons-icons/folder_icon.png"
+        height="50"
+        width="50"
+        (click)="makeProgramActive('hsSetReviewBot')"
+      />
+      <p>{{ "DESKTOP.HSSETREVIEWBOT" | translate }}</p>
     </div>
-
-    <div class="rightSide">
-        <div class="bottom">
-            <div class="right icon">
-                <a href="mailto:mateuscechetto@gmail.com"><input id="email" type="image" alt="Email" title="Email"
-                        src="../../assets/images/buttons-icons/email_icon.png" height="50" width="50" /></a>
-                <p>Email</p>
-            </div>
-            <div class="right icon">
-                <a href="https://github.com/mateuscechetto" target="_blank"><input id="github" type="image" alt="GitHub"
-                        title="GitHub" src="../../assets/images/buttons-icons/github_icon.png" height="50"
-                        width="50" /></a>
-                <p>GitHub</p>
-            </div>
-            <div class="right icon">
-                <a href="https://www.linkedin.com/in/mateuscechetto/" target="_blank"><input id="linkedIn" type="image"
-                        title="LinkedIn" alt="LinkedIn" src="../../assets/images/buttons-icons/linkedin_icon.png"
-                        height="50" width="50" /></a>
-                <p>LinkedIn</p>
-            </div>
-        </div>
+    <div class="left icon">
+      <input
+        class="folder"
+        id="hsSetReviewSite"
+        type="image"
+        alt="hsSetReviewSite"
+        [title]="'DESKTOP.HSSETREVIEWSITE' | translate"
+        src="../../assets/images/buttons-icons/folder_icon.png"
+        height="50"
+        width="50"
+        (click)="makeProgramActive('hsSetReviewSite')"
+      />
+      <p>{{ "DESKTOP.HSSETREVIEWSITE" | translate }}</p>
     </div>
+    <div class="left icon">
+      <input
+        class="folder"
+        id="maquiAR"
+        type="image"
+        alt="maquiAR"
+        [title]="'DESKTOP.MAQUIAR' | translate"
+        src="../../assets/images/buttons-icons/folder_icon.png"
+        height="50"
+        width="50"
+        (click)="makeProgramActive('maquiAR')"
+      />
+      <p>{{ "DESKTOP.MAQUIAR" | translate }}</p>
+    </div>
+    <div class="left icon">
+      <input
+        class="folder"
+        id="portfolio"
+        type="image"
+        alt="portfolio"
+        [title]="'DESKTOP.PORTFOLIO' | translate"
+        src="../../assets/images/buttons-icons/folder_icon.png"
+        height="50"
+        width="50"
+        (click)="makeProgramActive('portfolio')"
+      />
+      <p>{{ "DESKTOP.PORTFOLIO" | translate }}</p>
+    </div>
+    <div class="left icon">
+      <a [href]="'RESUMELINK' | translate" target="_blank"
+        ><input
+          class="resume"
+          id="resume"
+          type="image"
+          alt="resume"
+          [title]="'DESKTOP.RESUME' | translate"
+          src="../../assets/images/buttons-icons/pdf_icon.png"
+          height="50"
+          width="50"
+      /></a>
+      <p>{{ "DESKTOP.RESUME" | translate }}</p>
+    </div>
+    <div class="left icon">
+      <input
+        class="recycleBin"
+        id="recycleBin"
+        type="image"
+        alt="Recycle Bin"
+        [title]="'DESKTOP.RECYCLEBIN' | translate"
+        src="../../assets/images/buttons-icons/recycle-bin_icon.png"
+        height="50"
+        width="50"
+        (click)="makeProgramActive('recycleBin')"
+      />
+      <p>{{ "DESKTOP.RECYCLEBIN" | translate }}</p>
+    </div>
+  </div>
 
+  <div class="rightSide">
+    <div class="bottom">
+      <div class="right icon">
+        <a href="mailto:mateuscechetto@gmail.com"
+          ><input
+            id="email"
+            type="image"
+            alt="Email"
+            title="Email"
+            src="../../assets/images/buttons-icons/email_icon.png"
+            height="50"
+            width="50"
+        /></a>
+        <p>Email</p>
+      </div>
+      <div class="right icon">
+        <a href="https://github.com/mateuscechetto" target="_blank"
+          ><input
+            id="github"
+            type="image"
+            alt="GitHub"
+            title="GitHub"
+            src="../../assets/images/buttons-icons/github_icon.png"
+            height="50"
+            width="50"
+        /></a>
+        <p>GitHub</p>
+      </div>
+      <div class="right icon">
+        <a href="https://www.linkedin.com/in/mateuscechetto/" target="_blank"
+          ><input
+            id="linkedIn"
+            type="image"
+            title="LinkedIn"
+            alt="LinkedIn"
+            src="../../assets/images/buttons-icons/linkedin_icon.png"
+            height="50"
+            width="50"
+        /></a>
+        <p>LinkedIn</p>
+      </div>
+    </div>
+  </div>
 </div>
-<app-start-bar [programs]="activePrograms" [language]="translate.currentLang"
-    (activateProgram)="makeProgramActive($event)" (changedLanguage)="translateLanguageTo($event)"></app-start-bar>
+<app-start-bar
+  [programs]="activePrograms"
+  [language]="translate.currentLang"
+  (activateProgram)="makeProgramActive($event)"
+  (changedLanguage)="translateLanguageTo($event)"
+></app-start-bar>

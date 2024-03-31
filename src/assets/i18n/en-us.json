@@ -5,6 +5,7 @@
         "URLSHORTENER": "URL Shortener",
         "PORTFOLIO": "This Website",
         "HSSETREVIEWBOT": "Hearthstone Set Review Bot",
+        "HSSETREVIEWSITE": "Hearthstone Set Review Hub",
         "RECYCLEBIN": "Recycle Bin"
     },
     "STARTBAR": {
@@ -26,7 +27,6 @@
             "TEXT": "Tips:",
             "1": "You can move this window and resize it",
             "2": "You can change the language on the start menu.",
-            "3": "You can open the start menu with the Windows key",
             "4": "You can close the start menu by clicking outside of it",
             "5": "You can change the active window in the taskbar",
             "6": "You can enter fullscreen mode by pressing F11 or clicking here"
@@ -50,6 +50,12 @@
         "HEADLINE": "Twitch chat bot to help Hearthstone set reviews",
         "TEXT": "<p>Hearthstone is a popular turn-based digital collectible card game boasting millions of active players. Each year, the game releases between 3 and 4 new sets, introducing fresh cards and strategies. In anticipation of these expansions, prominent players and streamers provide set reviews, offering their insights on the new cards.</p><p>To enhance viewer engagement, I developed a bot that integrates the audience into the review process. The bot allows viewers to share their personal ratings for the cards directly through Twitch chat. These ratings are then collected and stored in a Google Sheets document for reference.</p><p>For the technical implementation, I utilized <b>Node, Express, OAuth2, JWT, MongoDB (Mongoose), tmi.js, </b> and <b>Google Sheets API</b>.  In addition, I created a simple frontend using <b>React</b>, which I deployed on <b>Heroku</b></p>",
         "READMORE": "<hr><ul><li>1140 different people rated cards</li><li>Total of 18221 ratings were given for the 135 cards</li><li>32777 twitch chat messages were read</li></ul>"
+    },
+    "HSSETREVIEWSITE": {
+        "TITLE": "Set Review Hub",
+        "HEADLINE": "Hearthstone Set Review Hub",
+        "TEXT": "<p>After being praised for the Set Review Bot, I decided to evolve it into a plataform to centralize information about card reviews and let any user create their own, while still providing the bot for streamers record their chat's ratings for each card.</p><p>Keeping the same backend from the Set Review Bot, I decided to change the frontend to <b>Angular</b> with <b>PrimeNG</b> components, techs that I am more familiar with, being able to deploy it in time for the \"Showdown in the Badlands\" expansion, released in November 2023. <b>In a week, more than 80 users</b> created an account in the system.</p><p>After deployment, people reach me out willing to contribute to the project, which made me adapt the project to follow community standards for open-source. One of those developers was a member of Untapped.gg (company that created the most popular Deck Tracker tool for Hearthstone), and provided data about the cards after the expansion release.</p><p>With that data, I and a friend of mine trained classification models, using <b>Python</b> libraries <b>Pandas</b> and <b>scikit-learn</b>, to give ratings to the cards based on their popularity and winrate. The model achieved a satisfying accuracy (around 74%) and we used those ratings to compare to the users before expansion ratings and to rank the best reviews.</p>",
+        "READMORE": "<hr><p>For the second expansion after the website is live, it reached even better results:</p><ul><li><b>230 users</b> logged in and rated at least 1 cards</li><li><b>Over 700 users</b> rated cards <b>concurrently</b> via Twitch chat interactions.</li><li>The platform also gained visibility among prominent streamers, including the current world champion</li></ul>"
     },
     "URLSHORTENER": {
         "TITLE": "URL Shortener",

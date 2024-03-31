@@ -16,7 +16,7 @@ export class AboutComponent extends WindowComponent implements OnInit {
   elem: any;
   isFullScreen: boolean = false;
 
-  tips: string[] = ['ABOUT.TIPS.1', 'ABOUT.TIPS.2', 'ABOUT.TIPS.3', 'ABOUT.TIPS.4', 'ABOUT.TIPS.5', 'ABOUT.TIPS.6'];
+  tips: string[] = ['ABOUT.TIPS.1', 'ABOUT.TIPS.2', 'ABOUT.TIPS.4', 'ABOUT.TIPS.5', 'ABOUT.TIPS.6'];
 
   constructor(
     @Inject(DOCUMENT) private document: any

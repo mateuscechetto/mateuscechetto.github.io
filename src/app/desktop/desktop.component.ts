@@ -32,13 +32,13 @@ export class DesktopComponent implements OnInit {
   maquiAR: Project = PROJECTS.maquiAR;
   portfolio: Project = PROJECTS.portfolio;
   hsSetReviewBot: Project = PROJECTS.hsSetReviewBot;
-  urlShortener: Project = PROJECTS.urlShortener;
+  hsSetReviewSite: Project = PROJECTS.hsSetReviewSite;
   moreAboutMe: Project = PROJECTS.moreAboutMe;
 
   maquiARProgram: ProgramData = new ProgramData("maquiAR", 'MAQUIAR.TITLE', String(this.lastZIndex));
-  urlShortenerProgram: ProgramData = new ProgramData("urlShortener", 'URLSHORTENER.TITLE', String(this.lastZIndex));
   portfolioProgram: ProgramData = new ProgramData("portfolio", 'PORTFOLIO.TITLE', String(this.lastZIndex));
   hsSetReviewBotProgram: ProgramData = new ProgramData("hsSetReviewBot", 'HSSETREVIEWBOT.TITLE', String(this.lastZIndex));
+  hsSetReviewSiteProgram: ProgramData = new ProgramData("hsSetReviewSite", 'HSSETREVIEWSITE.TITLE', String(this.lastZIndex));
   aboutProgram: ProgramData = new ProgramData("about", "ABOUT.TITLE", String(this.lastZIndex), true, true, "../../assets/images/buttons-icons/Info_icon.png");
   recycleBinProgram: ProgramData = new ProgramData("recycleBin", "RECYCLEBIN.TITLE", String(this.lastZIndex), false, false, "../../assets/images/buttons-icons/recycle-bin_icon.png");
   moreAboutMeProgram: ProgramData = new ProgramData("moreAboutMe", "RECYCLEBIN.MOREABOUTME", String(this.lastZIndex));
@@ -48,9 +48,9 @@ export class DesktopComponent implements OnInit {
   programs = {
     "about": this.aboutProgram,
     "maquiAR": this.maquiARProgram,
-    "urlShortener": this.urlShortenerProgram,
     "portfolio": this.portfolioProgram,
     "hsSetReviewBot": this.hsSetReviewBotProgram,
+    "hsSetReviewSite": this.hsSetReviewSiteProgram,
     "recycleBin": this.recycleBinProgram,
     "moreAboutMe": this.moreAboutMeProgram,
     "msPaint": this.msPaintProgram,
