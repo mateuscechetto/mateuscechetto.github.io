@@ -10,13 +10,9 @@ I made this website as a portfolio to show some of my projects. It simulates a W
 
 - **Angular**, **TypeScript**, **HTML** and **SCSS**.
 
-![gif showing opening and closing windows](https://cdn.discordapp.com/attachments/410766471052918786/1015246434968285214/portfolioGIF1.gif)
+![view of the site](https://github.com/mateuscechetto/mateuscechetto.github.io/blob/master/src/assets/images/portfolio/portfolio.png?raw=true)
 
-![gif showing Start menu](https://cdn.discordapp.com/attachments/410766471052918786/1015246434242674739/portfolioGIF2.gif)
-
-![gif showing a window being moved and resized, and the paint canvas](https://cdn.discordapp.com/attachments/410766471052918786/1015246433600938024/portfolioGIF3.gif)
-
-![mobile view of the site](https://cdn.discordapp.com/attachments/410766471052918786/1015247005230051348/unknown.png)
+![mobile view of the site](https://github.com/mateuscechetto/mateuscechetto.github.io/blob/master/src/assets/images/portfolio/portfolioMobile.png?raw=true)
 
 ## Features 
 
@@ -40,12 +36,6 @@ I made this website as a portfolio to show some of my projects. It simulates a W
   - Flags are added on right click
   - When the player hit a bomb, the board is revealed and the clicked cell becomes red
   - The timer starts on first click, stops when the game ends, and resets whenever a new game starts
-
-![minesweeper window](https://cdn.discordapp.com/attachments/410766471052918786/1016765975267389440/unknown.png)
-
-![minesweeper game win screen](https://cdn.discordapp.com/attachments/410766471052918786/1016765887958757406/unknown.png)
-
-![minesweeper game lost screen](https://cdn.discordapp.com/attachments/410766471052918786/1016765178752282624/unknown.png)
 
 
 ### Upcoming Features

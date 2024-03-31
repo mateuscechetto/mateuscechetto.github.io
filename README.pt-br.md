@@ -10,13 +10,9 @@ Fiz este site como portfolio para mostrar alguns dos meus projetos. Ele simula u
 
 - **Angular**, **TypeScript**, **HTML** e **SCSS**.
 
-![gif mostrando janelas sendo abertas e fechadas](https://cdn.discordapp.com/attachments/410766471052918786/1015246434968285214/portfolioGIF1.gif)
+![visão do site](https://github.com/mateuscechetto/mateuscechetto.github.io/blob/master/src/assets/images/portfolio/portfolio.png?raw=true)
 
-![gif mostrando o menu Iniciar](https://cdn.discordapp.com/attachments/410766471052918786/1015246434242674739/portfolioGIF2.gif)
-
-![gif mostrando uma janela sendo movida e redimensionada, e o canvas do paint](https://cdn.discordapp.com/attachments/410766471052918786/1015246433600938024/portfolioGIF3.gif)
-
-![visão do site no celular](https://cdn.discordapp.com/attachments/410766471052918786/1015247005230051348/unknown.png)
+![visão do site no celular](https://github.com/mateuscechetto/mateuscechetto.github.io/blob/master/src/assets/images/portfolio/portfolioMobile.png?raw=true)
 
 ## Funcionalidades 
 
@@ -40,12 +36,6 @@ Fiz este site como portfolio para mostrar alguns dos meus projetos. Ele simula u
   - Bandeiras são adicionadas ao clicar com o botão direito do mouse
   - Quando o jogador clica numa bomba, o tabuleiro é revelado e o quadrado clicado fica vermelho 
   - O cronômetro começa no primeiro clique em um quadrado, para quando o jogo acaba e reseta quando um novo jogo começa
-
-![janela do campo minado](https://cdn.discordapp.com/attachments/410766471052918786/1016765975267389440/unknown.png)
-
-![tela de vitória do campo minado](https://cdn.discordapp.com/attachments/410766471052918786/1016765887958757406/unknown.png)
-
-![tela de derrota do campo minado](https://cdn.discordapp.com/attachments/410766471052918786/1016765178752282624/unknown.png)
 
 
 ### Próximas Funcionalidades
